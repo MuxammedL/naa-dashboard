@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme inline {
+  --ease-custom: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-primary: #001011;
+  --color-text-color: #222222;
+  --color-gray: #a7a7a7;
+  --color-light-gray: #d9d9d980;
+  --color-primary-24: rgba(0, 16, 17, 0.24);
+  --color-gray-60: #666666;
+  --color-milk: #f9f9f9;
+  --color-description: #cccfcf;
+  --color-white-24: #ffffff3d;
+  --color-divider_light: #e0e0e0;
+  --color-serviceHr: #1f2d2e;
+  --color-orange: #ff6e06;
+}
