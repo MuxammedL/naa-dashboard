@@ -4,9 +4,9 @@ import Sidebar from "../sidebar";
 
 const MainLayout = () => {
     return (
-        <div className={`relative `}>
+        <div className="flex flex-col h-screen">
             <Header />
-            <main>
+            <main className="h-full flex">
                 <Sidebar />
                 <Outlet />
             </main>

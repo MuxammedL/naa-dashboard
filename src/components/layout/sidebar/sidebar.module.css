@@ -1,0 +1,67 @@
+@reference "../../../index.css";
+
+@layer components {
+  .sidebar {
+    @apply w-[68px] border-e ease-out duration-300 transition-[width] border-[#E9EAEB] h-full py-6 flex flex-col gap-2 text-sidebar-icon-color select-none;
+  }
+
+  .sidebar.active {
+    @apply w-[296px];
+  }
+
+  .sidebar.active .linkText {
+    @apply opacity-100;
+  }
+
+  .toggleButton {
+    @apply mx-auto w-fit px-4 cursor-pointer;
+  }
+
+  .sidebar.active .toggleButton {
+    @apply mx-0 ml-auto;
+  }
+
+  .nav {
+    @apply h-full mx-3 relative overflow-hidden;
+  }
+
+  .linkItems {
+    @apply absolute inset-0  w-full h-full overflow-y-auto overflow-x-hidden;
+  }
+
+  .link {
+    @apply flex gap-2 items-center px-3 py-2 rounded-[6px] cursor-pointer hover:bg-acitve-sidebar-item custom-hover-transition transition-[background];
+  }
+
+  .link.active {
+    @apply bg-acitve-sidebar-item;
+  }
+
+  .linkText {
+    @apply font-semibold opacity-0 ease-out duration-300 transition-[opacity] leading-6 text-sidebar-text-color whitespace-nowrap;
+  }
+
+  .dropdown {
+    @apply justify-between;
+  }
+
+  .icon {
+    @apply ease-out duration-300 transition-[rotate];
+  }
+
+  .dropdownItems {
+    @apply grid overflow-hidden ease-out duration-300 transition-[grid] grid-rows-[0fr] opacity-0;
+  }
+
+  .dropdownItems.active {
+    @apply grid-rows-[1fr] opacity-100;
+  }
+
+  .dropdownItem {
+    @apply pl-[42px] rounded-[6px] py-2 block hover:bg-acitve-sidebar-item custom-hover-transition transition-[background] cursor-pointer;
+  }
+
+  .dropdownItem.active {
+    @apply bg-acitve-sidebar-item;
+  }
+}

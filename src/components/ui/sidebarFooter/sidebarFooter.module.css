@@ -1,0 +1,32 @@
+@reference "../../../index.css";
+
+@layer components {
+  .footerButton {
+    @apply ease-out duration-300 transition-all border-light-gray rounded-4xl outline-0 border mx-[12.5px] flex gap-2 items-center cursor-pointer text-left select-none;
+  }
+
+  .footerButton.active {
+    @apply p-3 mx-4 rounded-xl;
+  }
+
+  .avatar {
+    @apply w-10 h-10 bg-milk rounded-4xl border-light-gray border cursor-pointer grid place-items-center shrink-0;
+  }
+
+  .initials {
+    @apply leading-6 font-semibold;
+  }
+
+  .userName {
+    @apply text-text-color font-semibold text-[14px] leading-5 opacity-0 ease-out duration-300 transition-[opacity] whitespace-nowrap;
+  }
+
+  .userRole {
+    @apply text-secondary-text-color text-[14px] leading-5 opacity-0 ease-out duration-300 transition-[opacity] whitespace-nowrap;
+  }
+
+  .footerButton.active .userName,
+  .footerButton.active .userRole {
+    @apply opacity-100;
+  }
+}
