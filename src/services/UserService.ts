@@ -1,6 +1,5 @@
-import type { LoginResponse, UserProfile } from "@/types/response";
+import type { LoginRequest, LoginResponse, UserProfile } from "@/types/dto";
 import { HttpClient } from "./HttpClient";
-import type { LoginRequest } from "@/types/request";
 
 export class UserService {
   static async login(credentials: LoginRequest): Promise<LoginResponse> {
