@@ -3,7 +3,11 @@ import styles from "./header.module.css";
 
 const Header = () => {
     return (
-        <div className={styles.header}>Header</div>
+        <header className={styles.header}>
+            <nav>
+                <img src="./logo.png" className={styles.logo} width={163} height={40} />
+            </nav>
+        </header>
     )
 }
 

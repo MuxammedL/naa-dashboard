@@ -2,8 +2,10 @@
 
 @theme inline {
   --ease-custom: cubic-bezier(0.4, 0, 0.2, 1);
-  --color-primary: #001011;
-  --color-text-color: #222222;
+  --color-primary: #243c7b;
+  --color-sidebar-text-color: #414651;
+  --color-sidebar-icon-color: #717680;
+  --color-text-color: #181D27;
   --color-gray: #a7a7a7;
   --color-light-gray: #d9d9d980;
   --color-primary-24: rgba(0, 16, 17, 0.24);
