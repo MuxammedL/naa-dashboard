@@ -14,3 +14,8 @@ export interface UserProfile {
   email: string;
   avatarUrl?: string;
 }
+
+export interface LoginRequest {
+  email: string;
+  password: string;
+}

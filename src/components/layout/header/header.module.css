@@ -1,0 +1,13 @@
+@reference "../../../index.css";
+
+@layer components {
+  .header {
+    @apply bg-primary;
+  }
+  .container {
+    @apply py-1 px-4 flex justify-between items-center;
+  }
+  .wrapper {
+    @apply flex items-center;
+  }
+}
