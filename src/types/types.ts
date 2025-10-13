@@ -16,3 +16,68 @@ export type SidebarLink = {
     href?: string;
   }[];
 };
+
+export type LabelVariant =
+  | "success"
+  | "warning"
+  | "blue"
+  | "purple"
+  | "error"
+  | "ghost";
+
+export type PersonalInformation = {
+  name: string;
+  surname: string;
+  fatherName: string;
+  gender: string;
+  birthDate: string;
+  idSeries: string;
+  idNumber: string;
+  fincode: string;
+  username: string;
+  citizenship: string;
+  socialStatus: string;
+  socialCondition: string;
+  militaryStatus: string;
+  disabilityStatus: string;
+  employmentStartDate: string;
+};
+
+export type ContactInformation = {
+  mobileNumber: string;
+  internalNumber: string;
+  address: string;
+  registrationNumber: string;
+};
+
+export type ForeignLanguage = {
+  language: string;
+  level: string;
+};
+
+export type AcademicInformation = {
+  department: string;
+  academicDegree: string;
+  academicTitle: string;
+  maxHours: number;
+  positionType: string;
+  employmentType: string;
+  languagesTaught: string[];
+  foreignLanguages: ForeignLanguage[];
+};
+
+export type FileInfo = {
+  name: string;
+  type: string;
+  size?: string;
+};
+
+export type TeacherDTO = {
+  personalInformation: PersonalInformation;
+  contactInformation: ContactInformation;
+  academicInformation: AcademicInformation;
+  subjects: string[];
+  files: FileInfo[];
+  status: string;
+  fullName: string;
+};

@@ -5,16 +5,16 @@ import axios, {
 } from "axios";
 
 export class HttpClient {
-  private static readonly baseURL = import.meta.env.BASE_URL;
+  private static readonly baseURL = import.meta.env.VITE_API_URL;
   private static readonly instance = axios.create({
     baseURL: this.baseURL,
     headers: { "Content-Type": "application/json" },
     timeout: 10000,
   });
 
-  static setToken(token: string): void {
-    this.instance.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-  }
+  // static setToken(token: string): void {
+  //   this.instance.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  // }
 
   private static async request<T>(
     config: AxiosRequestConfig
