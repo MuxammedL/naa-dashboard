@@ -1,4 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { LabelVariant } from "./types";
 
 export interface SidebarFooterProps {
   activeSidebar?: boolean;
@@ -22,7 +23,7 @@ export interface InputProps
 }
 
 export interface LabelProps {
-  variant?: "success" | "warning" | "blue" | "purple" | "error";
+  variant?: LabelVariant;
   size?: "small" | "medium" | "large";
   children: ReactNode;
   className?: string;

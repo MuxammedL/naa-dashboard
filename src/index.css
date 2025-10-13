@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 body {
   font-family: "Inter", sans-serif;
@@ -11,7 +14,7 @@ body {
   --color-sidebar-icon-color: #717680;
   --color-text-color: #181d27;
   --color-secondary-text-color: #535862;
-  --color-acitve-sidebar-item: #fafafa;
+  --color-active-sidebar-item: #fafafa;
   --color-secondary: #346cdc;
   --color-light-gray: #e9eaeb;
   --color-primary-24: rgba(0, 16, 17, 0.24);
@@ -31,8 +34,8 @@ body {
   --color-success-200: #abefc6;
   --color-success-700: #067647;
 
-  --color-blue-50: #b2ddff;
-  --color-blue-200: #eff8ff;
+  --color-blue-50: #eff8ff;
+  --color-blue-200: #b2ddff;
   --color-blue-700: #175cd3;
 
   --color-purple-50: #f4f3ff;
@@ -46,6 +49,8 @@ body {
   --color-brand-50: #f0f6fe;
   --color-brand-200: #c4ddf9;
   --color-brand-700: #2b58ca;
+
+  --color-table-border: #e9eaeb;
 }
 
 @utility custom-hover-transition {
