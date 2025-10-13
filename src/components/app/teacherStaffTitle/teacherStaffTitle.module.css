@@ -1,0 +1,39 @@
+@reference "../../../index.css";
+
+@layer components {
+  .wrapper {
+    @apply flex w-full;
+  }
+
+  .title {
+    @apply text-[24px] leading-8 font-semibold;
+  }
+
+  .description {
+    @apply leading-6;
+  }
+
+  .contentWrapper {
+    @apply flex flex-col gap-1 w-full;
+  }
+
+  .btnsWrapper {
+    @apply flex gap-4 items-start;
+  }
+
+  .btn {
+    @apply flex gap-2 items-center border cursor-pointer border-[#D5D7DA] text-sidebar-icon-color px-3 py-2 rounded-lg font-semibold text-[14px] leading-5;
+  }
+
+  .btnPrimary {
+    @apply border-[#9BC6F5] text-[#2B58CA];
+  }
+
+  .btnText {
+    @apply whitespace-nowrap text-text-color;
+  }
+
+  .btnPrimary .btnText {
+    @apply text-[#2B58CA];
+  }
+}

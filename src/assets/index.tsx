@@ -2,15 +2,21 @@ import Announcement from "./Announcement";
 import BackPack from "./BackPack";
 import BarChart from "./BarChart";
 import Bell from "./Bell";
+import Calendar from "./Calendar";
+import CalendarPlus from "./CalendarPlus";
 import ChevronDown from "./ChevronDown";
 import Done from "./Done";
 import DotsGrid from "./DotsGrid";
+import DotsVertical from "./DotsVertical";
+import Edit from "./Edit";
 import File from "./File";
 import FileText from "./FileText";
 import Folder from "./Folder";
 import Search from "./Search";
 import Sidebar from "./Sidebar";
 import Stand from "./Stand";
+import TrashBin from "./TrashBin";
+import UserPlus from "./UserPlus";
 import Users from "./Users";
 
 export const Icons = {
@@ -27,5 +33,11 @@ export const Icons = {
     stand: Stand,
     backPack: BackPack,
     announcement: Announcement,
-    search: Search
+    search: Search,
+    calendar: Calendar,
+    calendarPlus: CalendarPlus,
+    dotsVertical: DotsVertical,
+    edit: Edit,
+    trashBin: TrashBin,
+    userPlus: UserPlus
 }
