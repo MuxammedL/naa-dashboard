@@ -12,6 +12,7 @@ body {
   --color-text-color: #181d27;
   --color-secondary-text-color: #535862;
   --color-acitve-sidebar-item: #fafafa;
+  --color-secondary: #346cdc;
   --color-light-gray: #e9eaeb;
   --color-primary-24: rgba(0, 16, 17, 0.24);
   --color-gray-60: #666666;
@@ -21,6 +22,30 @@ body {
   --color-divider_light: #e0e0e0;
   --color-serviceHr: #1f2d2e;
   --color-orange: #ff6e06;
+
+  --color-warning-50: #fffaeb;
+  --color-warning-200: #fedf89;
+  --color-warning-700: #b54708;
+
+  --color-success-50: #ecfdf3;
+  --color-success-200: #abefc6;
+  --color-success-700: #067647;
+
+  --color-blue-50: #b2ddff;
+  --color-blue-200: #eff8ff;
+  --color-blue-700: #175cd3;
+
+  --color-purple-50: #f4f3ff;
+  --color-purple-200: #d9d6fe;
+  --color-purple-700: #5925dc;
+
+  --color-error-50: #fef3f2;
+  --color-error-200: #fecdca;
+  --color-error-700: #b42318;
+
+  --color-brand-50: #f0f6fe;
+  --color-brand-200: #c4ddf9;
+  --color-brand-700: #2b58ca;
 }
 
 @utility custom-hover-transition {

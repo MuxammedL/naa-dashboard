@@ -5,6 +5,10 @@
     @apply flex w-full;
   }
 
+  .divider {
+    @apply bg-[#E9EAEB] h-[1px] w-full;
+  }
+
   .title {
     @apply text-[24px] leading-8 font-semibold;
   }
@@ -21,19 +25,11 @@
     @apply flex gap-4 items-start;
   }
 
-  .btn {
-    @apply flex gap-2 items-center border cursor-pointer border-[#D5D7DA] text-sidebar-icon-color px-3 py-2 rounded-lg font-semibold text-[14px] leading-5;
-  }
-
-  .btnPrimary {
-    @apply border-[#9BC6F5] text-[#2B58CA];
-  }
-
   .btnText {
     @apply whitespace-nowrap text-text-color;
   }
 
-  .btnPrimary .btnText {
+  .btnSecondary .btnText {
     @apply text-[#2B58CA];
   }
 }

@@ -1,0 +1,27 @@
+@reference './../../../app/globals.css';
+
+@layer components {
+  .label {
+    @apply z-[1] relative label2 px-1 pt-0.5 left-4 opacity-0 bg-grey-50 text-blue-1-500;
+    transition: transform 0.3s ease-out, opacity 0.2s ease-in;
+    transform: translate(0);
+  }
+
+  .input {
+    @apply rounded-[4px] border border-grey-600 px-4 py-3 lg:py-4 font-medium text-black-50 w-full focus:!border-blue-1-500 placeholder:text-black-50 label1 md:body4;
+  }
+}
+
+.input {
+  appearance: none;
+  transition: border 0.3s ease-out;
+}
+.input:focus {
+  outline: none;
+}
+
+.input:focus + .label,
+.label.active {
+  transform: translateY(10px);
+  opacity: 1;
+}

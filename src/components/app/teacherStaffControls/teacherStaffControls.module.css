@@ -1,0 +1,47 @@
+@reference "../../../index.css";
+
+@layer components {
+  .wrapper {
+    @apply flex w-full;
+  }
+
+  .divider {
+    @apply bg-[#E9EAEB] h-[1px] w-full;
+  }
+
+  .title {
+    @apply text-[14px] leading-5 font-medium text-[#414651];
+  }
+
+  .description {
+    @apply px-2 py-0.5 rounded-[6px];
+  }
+
+  .contentWrapper {
+    @apply flex gap-4 w-full items-center;
+  }
+
+  .btnsWrapper {
+    @apply flex gap-4 items-start;
+  }
+
+  .btn {
+    @apply bg-secondary !text-white border-secondary;
+  }
+
+  .btnText {
+    @apply whitespace-nowrap text-white;
+  }
+
+  .btnPrimary .btnText {
+    @apply text-[#2B58CA];
+  }
+
+  .searchInput {
+    @apply relative border border-[#D5D7DA] text-text-color px-3 flex items-center rounded-lg pl-10 w-[248px] h-[38px];
+  }
+
+  .input {
+    @apply text-[14px] leading-5 outline-0 placeholder:text-sidebar-icon-color;
+  }
+}
