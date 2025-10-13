@@ -42,7 +42,7 @@ const Sidebar = () => {
                             {
                                 link.href
                                     ?
-                                    <Link to={link.href} className={`${styles.link} ${pathname.pathname === link.href ? styles.active : ""}`}>
+                                    <Link to={link.href} title={link.name} className={`${styles.link} ${pathname.pathname === link.href ? styles.active : ""}`}>
                                         <link.icon width={20} height={20} className="shrink-0" />
                                         <span className={styles.linkText}>{link.name}</span>
                                     </Link>
@@ -50,6 +50,7 @@ const Sidebar = () => {
                                     <div
                                         className={`${styles.link} ${styles.dropdown}`}
                                         onClick={() => handleToggleDropdown(index)}
+                                        title={link.name}
                                     >
                                         <div className="flex items-center gap-2">
                                             <link.icon width={20} height={20} className="shrink-0" />
