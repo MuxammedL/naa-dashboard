@@ -6,9 +6,11 @@ const MainLayout = () => {
     return (
         <div className="flex flex-col h-screen">
             <Header />
-            <main className="h-full flex">
+            <main className="h-full flex overflow-hidden">
                 <Sidebar />
-                <Outlet />
+                <div className="w-full h-full overflow-y-auto">
+                    <Outlet />
+                </div>
             </main>
         </div>
     );

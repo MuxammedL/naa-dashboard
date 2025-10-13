@@ -14,7 +14,7 @@
   }
 
   .description {
-    @apply px-2 py-0.5 rounded-[6px];
+    @apply px-2 py-0.5 rounded-md;
   }
 
   .contentWrapper {
@@ -26,15 +26,11 @@
   }
 
   .btn {
-    @apply bg-secondary !text-white border-secondary;
+    @apply bg-secondary !border-[#FFFFFF1F] !text-white;
   }
 
   .btnText {
     @apply whitespace-nowrap text-white;
-  }
-
-  .btnPrimary .btnText {
-    @apply text-[#2B58CA];
   }
 
   .searchInput {
