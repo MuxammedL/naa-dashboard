@@ -12,9 +12,9 @@ export class HttpClient {
     timeout: 10000,
   });
 
-  // static setToken(token: string): void {
-  //   this.instance.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-  // }
+  static setToken(token: string): void {
+    this.instance.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  }
 
   private static async request<T>(
     config: AxiosRequestConfig
