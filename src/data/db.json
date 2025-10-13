@@ -1,0 +1,555 @@
+{
+  "teachers": [
+    {
+      "personalInformation": {
+        "name": "Əli",
+        "surname": "Məmmədov",
+        "fatherName": "Həsən",
+        "gender": "Kişi",
+        "birthDate": "1975-05-15",
+        "idSeries": "12345567",
+        "idNumber": "AZE 053539",
+        "fincode": "2jceyt",
+        "username": "ali.mammadov",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Evli",
+        "socialCondition": "-",
+        "militaryStatus": "Yoxdur",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2024-03-12"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994102345678",
+        "internalNumber": "3445",
+        "address": "C. Məmməquluzadə 102a, Blok 4",
+        "registrationNumber": "+994102345678"
+      },
+      "academicInformation": {
+        "department": "Kompüter Şəbəkələri",
+        "academicDegree": "Fəlsəfə doktoru",
+        "academicTitle": "Dosent",
+        "maxHours": 750,
+        "positionType": "0.5 ştat",
+        "employmentType": "Saat hesabı",
+        "languagesTaught": ["Azərbaycan", "Rus", "İngilis"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "C1" },
+          { "language": "İngilis", "level": "B2" },
+          { "language": "Fransız", "level": "-" },
+          { "language": "Alman", "level": "-" }
+        ]
+      },
+      "subjects": [
+        "Proqramlaşdırma əsasları və alqoritmlər",
+        "Verilənlər bazasının layihələndirilməsi və idarə edilməsi",
+        "Kompüter şəbəkələri və şəbəkə təhlükəsizliyi",
+        "Riyazi analiz və diferensial tənliklər",
+        "Fizika və tətbiqi mexanika",
+        "Süni intellekt və maşın öyrənməsi"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "1MB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1MB" },
+        { "name": "Sertifikat - İngilis dili B2", "type": "PDF", "size": "1MB" }
+      ],
+      "status": "Əmr yoxdur",
+      "fullName": "Əli Məmmədov Həsən"
+    },
+    {
+      "personalInformation": {
+        "name": "Nigar",
+        "surname": "Rəhimova",
+        "fatherName": "Telman",
+        "gender": "Qadın",
+        "birthDate": "1982-09-22",
+        "idSeries": "87654321",
+        "idNumber": "AZE 124567",
+        "fincode": "5kmpqr",
+        "username": "nigar.rahimova",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Evli",
+        "socialCondition": "-",
+        "militaryStatus": "-",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2023-09-01"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994505556677",
+        "internalNumber": "3201",
+        "address": "Ü. Hacıbəyov 45, Mənzil 12",
+        "registrationNumber": "+994505556677"
+      },
+      "academicInformation": {
+        "department": "Riyaziyyat",
+        "academicDegree": "Elmlər doktoru",
+        "academicTitle": "Professor",
+        "maxHours": 900,
+        "positionType": "Tam ştat",
+        "employmentType": "Əsas iş",
+        "languagesTaught": ["Azərbaycan", "İngilis"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "B2" },
+          { "language": "İngilis", "level": "C1" },
+          { "language": "Fransız", "level": "-" },
+          { "language": "Alman", "level": "A2" }
+        ]
+      },
+      "subjects": [
+        "Xətti cəbr və analitik həndəsə",
+        "Ehtimal nəzəriyyəsi və riyazi statistika",
+        "Diskret riyaziyyat",
+        "Riyazi analiz"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "1.2MB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1.1MB" },
+        { "name": "Doktorluq dissertasiyası", "type": "PDF", "size": "3.5MB" },
+        { "name": "IELTS sertifikatı", "type": "PDF", "size": "800KB" }
+      ],
+      "status": "Əmr var",
+      "fullName": "Nigar Rəhimova Telman"
+    },
+    {
+      "personalInformation": {
+        "name": "Rəşad",
+        "surname": "Əliyev",
+        "fatherName": "Mübariz",
+        "gender": "Kişi",
+        "birthDate": "1988-03-10",
+        "idSeries": "23456789",
+        "idNumber": "AZE 234891",
+        "fincode": "7xyzab",
+        "username": "rashad.aliyev",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Subay",
+        "socialCondition": "-",
+        "militaryStatus": "Xidmət keçib",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2022-01-15"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994557778899",
+        "internalNumber": "3567",
+        "address": "N. Nərimanov prospekti 88, Mənzil 25",
+        "registrationNumber": "+994557778899"
+      },
+      "academicInformation": {
+        "department": "Fizika",
+        "academicDegree": "Fəlsəfə doktoru",
+        "academicTitle": "Baş müəllim",
+        "maxHours": 800,
+        "positionType": "Tam ştat",
+        "employmentType": "Əsas iş",
+        "languagesTaught": ["Azərbaycan", "Rus"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "C2" },
+          { "language": "İngilis", "level": "B1" },
+          { "language": "Fransız", "level": "-" },
+          { "language": "Alman", "level": "-" }
+        ]
+      },
+      "subjects": [
+        "Ümumi fizika",
+        "Kvant mexanikası",
+        "Termodinamika və statistik fizika",
+        "Elektrodinamika"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "950KB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1.1MB" },
+        { "name": "Dissertasiya", "type": "PDF", "size": "2.8MB" }
+      ],
+      "status": "Əmr var",
+      "fullName": "Rəşad Əliyev Mübariz"
+    },
+    {
+      "personalInformation": {
+        "name": "Səbinə",
+        "surname": "Həsənova",
+        "fatherName": "Elxan",
+        "gender": "Qadın",
+        "birthDate": "1990-11-05",
+        "idSeries": "34567890",
+        "idNumber": "AZE 345612",
+        "fincode": "9abcde",
+        "username": "sabina.hasanova",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Evli",
+        "socialCondition": "-",
+        "militaryStatus": "-",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2021-09-20"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994701234567",
+        "internalNumber": "3789",
+        "address": "28 May küçəsi 12, Blok 7",
+        "registrationNumber": "+994701234567"
+      },
+      "academicInformation": {
+        "department": "İngilis dili",
+        "academicDegree": "Fəlsəfə doktoru",
+        "academicTitle": "Dosent",
+        "maxHours": 850,
+        "positionType": "Saat hesabı",
+        "employmentType": "Əsas iş",
+        "languagesTaught": ["İngilis", "Azərbaycan", "Türk"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "B1" },
+          { "language": "İngilis", "level": "C2" },
+          { "language": "Fransız", "level": "B1" },
+          { "language": "Alman", "level": "-" }
+        ]
+      },
+      "subjects": [
+        "İngilis dili qrammatikası",
+        "İngilis ədəbiyyatı",
+        "Akademik yazı",
+        "Tərcümə nəzəriyyəsi və təcrübəsi"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "1MB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1.2MB" },
+        { "name": "TOEFL sertifikatı", "type": "PDF", "size": "700KB" },
+        { "name": "Cambridge CPE", "type": "PDF", "size": "850KB" }
+      ],
+      "status": "Əmr var",
+      "fullName": "Səbinə Həsənova Elxan"
+    },
+    {
+      "personalInformation": {
+        "name": "Kamran",
+        "surname": "Quliyev",
+        "fatherName": "Ramin",
+        "gender": "Kişi",
+        "birthDate": "1979-07-18",
+        "idSeries": "45678901",
+        "idNumber": "AZE 456723",
+        "fincode": "3fghij",
+        "username": "kamran.quliyev",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Evli",
+        "socialCondition": "-",
+        "militaryStatus": "Xidmət keçib",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2020-02-10"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994509998877",
+        "internalNumber": "3412",
+        "address": "Ə. Qarayev prospekti 156",
+        "registrationNumber": "+994509998877"
+      },
+      "academicInformation": {
+        "department": "Kimya",
+        "academicDegree": "Elmlər doktoru",
+        "academicTitle": "Professor",
+        "maxHours": 920,
+        "positionType": "Tam ştat",
+        "employmentType": "Əsas iş",
+        "languagesTaught": ["Azərbaycan", "Rus", "İngilis"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "C1" },
+          { "language": "İngilis", "level": "B2" },
+          { "language": "Fransız", "level": "-" },
+          { "language": "Alman", "level": "B1" }
+        ]
+      },
+      "subjects": [
+        "Ümumi kimya",
+        "Üzvi kimya",
+        "Analitik kimya",
+        "Fiziki kimya",
+        "Biokimya"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "1.1MB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1.3MB" },
+        { "name": "Doktorluq dissertasiyası", "type": "PDF", "size": "4.2MB" },
+        { "name": "Alman dili sertifikatı", "type": "PDF", "size": "600KB" }
+      ],
+      "status": "Əmr var",
+      "fullName": "Kamran Quliyev Ramin"
+    },
+    {
+      "personalInformation": {
+        "name": "Günay",
+        "surname": "İsmayılova",
+        "fatherName": "Cavid",
+        "gender": "Qadın",
+        "birthDate": "1985-12-28",
+        "idSeries": "56789012",
+        "idNumber": "AZE 567834",
+        "fincode": "4klmno",
+        "username": "gunay.ismayilova",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Subay",
+        "socialCondition": "-",
+        "militaryStatus": "-",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2023-03-01"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994556667788",
+        "internalNumber": "3654",
+        "address": "S. Vurğun küçəsi 78, Mənzil 34",
+        "registrationNumber": "+994556667788"
+      },
+      "academicInformation": {
+        "department": "Tarix",
+        "academicDegree": "Fəlsəfə doktoru",
+        "academicTitle": "Dosent",
+        "maxHours": 780,
+        "positionType": "0.5 ştat",
+        "employmentType": "Əlavə iş",
+        "languagesTaught": ["Azərbaycan"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "C1" },
+          { "language": "İngilis", "level": "B1" },
+          { "language": "Fransız", "level": "A2" },
+          { "language": "Alman", "level": "-" }
+        ]
+      },
+      "subjects": [
+        "Azərbaycan tarixi",
+        "Ümumi tarix",
+        "Dünya mədəniyyəti tarixi",
+        "Arxeologiya"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "1MB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1.2MB" },
+        { "name": "Dissertasiya", "type": "PDF", "size": "3MB" }
+      ],
+      "status": "Əmr gözləyir",
+      "fullName": "Günay İsmayılova Cavid"
+    },
+    {
+      "personalInformation": {
+        "name": "Orxan",
+        "surname": "Bayramov",
+        "fatherName": "Sənan",
+        "gender": "Kişi",
+        "birthDate": "1992-04-14",
+        "idSeries": "67890123",
+        "idNumber": "AZE 678945",
+        "fincode": "6pqrst",
+        "username": "orxan.bayramov",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Evli",
+        "socialCondition": "-",
+        "militaryStatus": "Xidmət keçib",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2024-01-08"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994703334455",
+        "internalNumber": "3876",
+        "address": "H. Əliyev prospekti 234, Blok 2",
+        "registrationNumber": "+994703334455"
+      },
+      "academicInformation": {
+        "department": "İqtisadiyyat",
+        "academicDegree": "Fəlsəfə doktoru",
+        "academicTitle": "Baş müəllim",
+        "maxHours": 820,
+        "positionType": "Saat hesabı",
+        "employmentType": "Əsas iş",
+        "languagesTaught": ["Azərbaycan", "İngilis"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "B2" },
+          { "language": "İngilis", "level": "C1" },
+          { "language": "Fransız", "level": "-" },
+          { "language": "Alman", "level": "-" }
+        ]
+      },
+      "subjects": [
+        "Mikroiqtisadiyyat",
+        "Makroiqtisadiyyat",
+        "Maliyyə menecmenti",
+        "İqtisadi nəzəriyyə",
+        "Beynəlxalq iqtisadiyyat"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "1.1MB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1.3MB" },
+        { "name": "CFA Level 1 sertifikatı", "type": "PDF", "size": "750KB" }
+      ],
+      "status": "Əmr var",
+      "fullName": "Orxan Bayramov Sənan"
+    },
+    {
+      "personalInformation": {
+        "name": "Leyla",
+        "surname": "Mustafayeva",
+        "fatherName": "Akif",
+        "gender": "Qadın",
+        "birthDate": "1987-08-03",
+        "idSeries": "78901234",
+        "idNumber": "AZE 789056",
+        "fincode": "8uvwxy",
+        "username": "leyla.mustafayeva",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Evli",
+        "socialCondition": "-",
+        "militaryStatus": "-",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2022-09-12"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994508889900",
+        "internalNumber": "3098",
+        "address": "M. Müşfiq küçəsi 67, Mənzil 18",
+        "registrationNumber": "+994508889900"
+      },
+      "academicInformation": {
+        "department": "Biologiya",
+        "academicDegree": "Fəlsəfə doktoru",
+        "academicTitle": "Dosent",
+        "maxHours": 860,
+        "positionType": "Tam ştat",
+        "employmentType": "Əsas iş",
+        "languagesTaught": ["Azərbaycan", "Rus"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "C2" },
+          { "language": "İngilis", "level": "B2" },
+          { "language": "Fransız", "level": "-" },
+          { "language": "Alman", "level": "-" }
+        ]
+      },
+      "subjects": [
+        "Ümumi biologiya",
+        "Genetika",
+        "Molekulyar biologiya",
+        "Ekologiya",
+        "Botanika"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "1MB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1.2MB" },
+        { "name": "Dissertasiya", "type": "PDF", "size": "3.3MB" },
+        { "name": "Tədqiqat məqalələri", "type": "PDF", "size": "2.5MB" }
+      ],
+      "status": "Əmr var",
+      "fullName": "Leyla Mustafayeva Akif"
+    },
+    {
+      "personalInformation": {
+        "name": "Elvin",
+        "surname": "Nəbiyev",
+        "fatherName": "Taleh",
+        "gender": "Kişi",
+        "birthDate": "1983-06-25",
+        "idSeries": "89012345",
+        "idNumber": "AZE 890167",
+        "fincode": "1zabcd",
+        "username": "elvin.nabiyev",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Evli",
+        "socialCondition": "-",
+        "militaryStatus": "Xidmət keçib",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2021-02-16"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994559876543",
+        "internalNumber": "3234",
+        "address": "Xətai prospekti 189, Blok 6",
+        "registrationNumber": "+994559876543"
+      },
+      "academicInformation": {
+        "department": "Fəlsəfə",
+        "academicDegree": "Elmlər doktoru",
+        "academicTitle": "Professor",
+        "maxHours": 890,
+        "positionType": "Tam ştat",
+        "employmentType": "Əsas iş",
+        "languagesTaught": ["Azərbaycan", "Rus", "İngilis"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "C2" },
+          { "language": "İngilis", "level": "B2" },
+          { "language": "Fransız", "level": "B1" },
+          { "language": "Alman", "level": "A2" }
+        ]
+      },
+      "subjects": [
+        "Fəlsəfə tarixi",
+        "Məntiq",
+        "Etika",
+        "Estetika",
+        "Sosial fəlsəfə"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "1.1MB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1.2MB" },
+        { "name": "Doktorluq dissertasiyası", "type": "PDF", "size": "4.5MB" },
+        { "name": "Monoqrafiya", "type": "PDF", "size": "5.8MB" }
+      ],
+      "status": "Əmr var",
+      "fullName": "Elvin Nəbiyev Taleh"
+    },
+    {
+      "personalInformation": {
+        "name": "Aynur",
+        "surname": "Əhmədova",
+        "fatherName": "Fərid",
+        "gender": "Qadın",
+        "birthDate": "1995-01-20",
+        "idSeries": "90123456",
+        "idNumber": "AZE 901278",
+        "fincode": "2efghi",
+        "username": "aynur.ahmadova",
+        "citizenship": "Azərbaycan",
+        "socialStatus": "Subay",
+        "socialCondition": "-",
+        "militaryStatus": "-",
+        "disabilityStatus": "Yoxdur",
+        "employmentStartDate": "2024-09-01"
+      },
+      "contactInformation": {
+        "mobileNumber": "+994707654321",
+        "internalNumber": "3465",
+        "address": "A. Səhhət küçəsi 45, Mənzil 8",
+        "registrationNumber": "+994707654321"
+      },
+      "academicInformation": {
+        "department": "Psixologiya",
+        "academicDegree": "-",
+        "academicTitle": "Müəllim",
+        "maxHours": 680,
+        "positionType": "0.5 ştat",
+        "employmentType": "Saat hesabı",
+        "languagesTaught": ["Azərbaycan", "İngilis"],
+        "foreignLanguages": [
+          { "language": "Azərbaycan", "level": "-" },
+          { "language": "Rus", "level": "B1" },
+          { "language": "İngilis", "level": "C1" },
+          { "language": "Fransız", "level": "-" },
+          { "language": "Alman", "level": "-" }
+        ]
+      },
+      "subjects": [
+        "Ümumi psixologiya",
+        "İnkişaf psixologiyası",
+        "Sosial psixologiya",
+        "Pedaqoji psixologiya"
+      ],
+      "files": [
+        { "name": "Bakalavriat diplomu", "type": "PDF", "size": "980KB" },
+        { "name": "Magistratura diplomu", "type": "PDF", "size": "1.1MB" },
+        { "name": "İngilis dili sertifikatı", "type": "PDF", "size": "650KB" }
+      ],
+      "status": "Əmr gözləyir",
+      "fullName": "Aynur Əhmədova Fərid"
+    }
+  ]
+}
