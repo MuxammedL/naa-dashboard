@@ -1,0 +1,43 @@
+@reference "../../../index.css";
+
+@layer components {
+  .header {
+    @apply flex gap-5 items-center;
+  }
+
+  .avatar {
+    @apply rounded-4xl object-cover w-full h-full;
+  }
+
+  .avatarContainer {
+    @apply w-16 h-16 rounded-4xl;
+  }
+
+  .headerContent {
+    @apply flex flex-col gap-2;
+  }
+
+  .headerContentTop {
+    @apply flex items-center gap-2;
+  }
+
+  .teacherTitle {
+    @apply font-semibold text-[18px] leading-[28px];
+  }
+
+  .tabs {
+    @apply bg-active-sidebar-item border border-light-gray rounded-lg h-9 w-full relative; 
+  }
+
+  .tab {
+    @apply px-[11px] py-[7px] flex items-center gap-2 border border-transparent text-sidebar-icon-color rounded-lg cursor-pointer duration-300 ease-out transition-[border];
+  }
+
+  .tab.active {
+    @apply text-secondary-text-color border-[#D5D7DA] bg-white;
+  }
+
+  .tabText {
+    @apply whitespace-nowrap font-semibold text-[14px] leading-5;
+  }
+}
