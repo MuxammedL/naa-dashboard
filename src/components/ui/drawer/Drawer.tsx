@@ -7,12 +7,14 @@ import { DrawerTrigger } from './DrawerTrigger';
 import { DrawerContext } from '@/components/ui/drawer/DrawerContext';
 import type { DrawerProps } from '@/types/props';
 import type { DrawerSide } from '@/types/types';
+import classNames from 'classnames';
 
 export const Drawer: React.FC<DrawerProps> = ({
     children,
     open: controlledOpen,
     onOpenChange,
     side = 'right',
+    className
 }) => {
     const [internalOpen, setInternalOpen] = useState(false);
     const isControlled = controlledOpen !== undefined;
@@ -60,18 +62,19 @@ export const Drawer: React.FC<DrawerProps> = ({
 
     const portalNode = (
         <>
-            {/* Overlay */}
             <div
-                className={`fixed inset-0 bg-black transition-opacity duration-300 z-40 ${isOpen
-                        ? 'opacity-50 pointer-events-auto'
-                        : 'opacity-0 pointer-events-none'
+                className={`fixed inset-0 bg-white/20 backdrop-blur-[3px] transition-opacity duration-300 ease-out z-40 ${isOpen
+                    ? 'pointer-events-auto'
+                    : 'opacity-0 pointer-events-none'
                     }`}
                 onClick={() => setOpen(false)}
             />
 
-            {/* Drawer Panel */}
             <div
-                className={`fixed ${sideClasses[side]} ${sizeClasses[side]} bg-white shadow-2xl transition-transform duration-300 ease-in-out z-50 flex flex-col ${transformClasses[side]}`}
+                className={classNames(
+                    `fixed ${sideClasses[side]} ${sizeClasses[side]} bg-white shadow-sm transition-transform duration-300 ease-out z-50 flex flex-col ${transformClasses[side]}`,
+                    className
+                )}
             >
                 {drawerContent}
             </div>
@@ -80,10 +83,7 @@ export const Drawer: React.FC<DrawerProps> = ({
 
     return (
         <DrawerContext.Provider value={{ isOpen, setOpen, side }}>
-            {/* Trigger stays in normal DOM */}
             {triggerElements}
-
-            {/* Drawer + Overlay go to body via Portal */}
             {createPortal(portalNode, document.body)}
         </DrawerContext.Provider>
     );

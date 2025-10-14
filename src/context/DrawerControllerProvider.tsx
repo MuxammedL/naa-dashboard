@@ -1,8 +1,12 @@
 import { useState, type ReactNode } from "react";
-import { DrawerControllerContext, type DrawerKey } from "./DrawerControllerContext";
+import { DrawerControllerContext } from "./DrawerControllerContext";
+import type { DrawerKey } from "@/enum/DrawerKey";
 
 export const DrawerControllerProvider = ({ children }: { children: ReactNode }) => {
-    const [openDrawers, setOpenDrawers] = useState<Record<DrawerKey, boolean>>({});
+    const [openDrawers, setOpenDrawers] = useState<Record<DrawerKey, boolean>>({
+        TEACHERSTAFFDETAIL: false,
+    });
+    const [activeID, setActiveID] = useState<number>(0);
 
     const openDrawer = (key: DrawerKey) =>
         setOpenDrawers((prev) => ({ ...prev, [key]: true }));
@@ -14,7 +18,7 @@ export const DrawerControllerProvider = ({ children }: { children: ReactNode }) 
 
     return (
         <DrawerControllerContext.Provider
-            value={{ openDrawer, closeDrawer, isDrawerOpen }}
+            value={{ openDrawer, closeDrawer, isDrawerOpen, activeID, setActiveID }}
         >
             {children}
         </DrawerControllerContext.Provider>

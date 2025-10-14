@@ -9,7 +9,7 @@ export const DrawerCloser: React.FC<DrawerCloserProps> = ({ children }) => {
     return (
         <button
             onClick={() => setOpen(false)}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-500 hover:text-gray-700"
+            className="p-2 text-gray-500 cursor-pointer"
         >
             {children || <Icons.x width={20} height={20} />}
         </button>
