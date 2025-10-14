@@ -81,3 +81,12 @@ export type TeacherDTO = {
   status: string;
   fullName: string;
 };
+
+export type DrawerSide = 'right' | 'left' | 'top' | 'bottom';
+
+export interface DrawerContextType {
+  isOpen: boolean;
+  setOpen: (value: boolean) => void;
+  side: DrawerSide;
+}
+

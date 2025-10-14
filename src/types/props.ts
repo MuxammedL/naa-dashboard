@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
-import type { LabelVariant } from "./types";
+import type { DrawerSide, LabelVariant } from "./types";
 
 export interface SidebarFooterProps {
   activeSidebar?: boolean;
@@ -27,4 +27,32 @@ export interface LabelProps {
   size?: "small" | "medium" | "large";
   children: ReactNode;
   className?: string;
+}
+
+export interface DrawerProps {
+  children: React.ReactNode;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  side?: DrawerSide;
+}
+
+export interface DrawerTriggerProps {
+  children: React.ReactNode;
+  asChild?: boolean;
+}
+
+export interface DrawerTitleProps {
+  children: React.ReactNode;
+}
+
+export interface DrawerCloserProps {
+  children?: React.ReactNode;
+}
+
+export interface DrawerContentProps {
+  children: React.ReactNode;
+}
+
+export interface DrawerFooterProps {
+  children: React.ReactNode;
 }
