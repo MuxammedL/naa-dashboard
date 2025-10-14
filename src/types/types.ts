@@ -73,6 +73,8 @@ export type FileInfo = {
 };
 
 export type TeacherDTO = {
+  id: number;
+  avatar: string;
   personalInformation: PersonalInformation;
   contactInformation: ContactInformation;
   academicInformation: AcademicInformation;
@@ -82,7 +84,7 @@ export type TeacherDTO = {
   fullName: string;
 };
 
-export type DrawerSide = 'right' | 'left' | 'top' | 'bottom';
+export type DrawerSide = "right" | "left" | "top" | "bottom";
 
 export interface DrawerContextType {
   isOpen: boolean;
@@ -90,3 +92,14 @@ export interface DrawerContextType {
   side: DrawerSide;
 }
 
+export type TeacherDetailTabValue =
+  | "personalInformation"
+  | "academicInformation"
+  | "subjects"
+  | "files";
+
+export type TeacherDetailTab = {
+  title: string;
+  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+  value: TeacherDetailTabValue;
+};

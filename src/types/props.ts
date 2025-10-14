@@ -1,5 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
-import type { DrawerSide, LabelVariant } from "./types";
+import type { DrawerSide, LabelVariant, TeacherDTO } from "./types";
+import type { ColumnDef } from "@tanstack/react-table";
 
 export interface SidebarFooterProps {
   activeSidebar?: boolean;
@@ -34,6 +35,7 @@ export interface DrawerProps {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   side?: DrawerSide;
+  className?: string;
 }
 
 export interface DrawerTriggerProps {
@@ -55,4 +57,14 @@ export interface DrawerContentProps {
 
 export interface DrawerFooterProps {
   children: React.ReactNode;
+}
+
+export interface TeacherActionsCellProps {
+  teacherID: number;
+}
+
+export interface TeacherTableProps<TValue> {
+  columns: ColumnDef<TeacherDTO, TValue>[];
+  data: TeacherDTO[];
+  isLoading: boolean;
 }
