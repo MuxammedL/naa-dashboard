@@ -3,7 +3,6 @@ import {
     getCoreRowModel,
     useReactTable,
     getPaginationRowModel,
-    type ColumnDef,
 } from "@tanstack/react-table"
 
 import {
@@ -15,16 +14,15 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { Icons } from "@/assets"
+import { useDrawerController } from "@/hooks/useDrawerController"
+import { DrawerKey } from "@/enum/DrawerKey"
+import type { TeacherTableProps } from "@/types/props"
 
-interface TeacherTableProps<TData, TValue> {
-    columns: ColumnDef<TData, TValue>[]
-    data: TData[]
-}
-
-export function TeacherTable<TData, TValue>({
+export function TeacherTable<TValue>({
     columns,
     data,
-}: TeacherTableProps<TData, TValue>) {
+    isLoading
+}: TeacherTableProps<TValue>) {
     const table = useReactTable({
         data,
         columns,
@@ -36,10 +34,11 @@ export function TeacherTable<TData, TValue>({
             },
         },
     })
+    const { openDrawer, setActiveID } = useDrawerController();
 
     return (
         <div className="w-full h-full flex flex-col gap-4 justify-between">
-            <div className="overflow-hidden rounded-md border border-table-border">
+            <div className="overflow-hidden rounded-md border h-full border-table-border">
                 <Table>
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (
@@ -60,26 +59,42 @@ export function TeacherTable<TData, TValue>({
                         ))}
                     </TableHeader>
                     <TableBody>
-                        {table.getRowModel().rows?.length ? (
-                            table.getRowModel().rows.map((row) => (
-                                <TableRow
-                                    key={row.id}
-                                    data-state={row.getIsSelected() && "selected"}
-                                >
-                                    {row.getVisibleCells().map((cell) => (
-                                        <TableCell key={cell.id}>
-                                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        {isLoading ?
+                            Array.from({ length: 10 }).map((_, rowIdx) => (
+                                <TableRow key={rowIdx}>
+                                    {columns.map((_, colIdx) => (
+                                        <TableCell key={colIdx}>
+                                            <div className="h-4 bg-gray-300 rounded animate-pulse w-full">
+                                                &nbsp;
+                                            </div>
                                         </TableCell>
                                     ))}
                                 </TableRow>
                             ))
-                        ) : (
-                            <TableRow>
-                                <TableCell colSpan={columns.length} className="h-24 text-center">
-                                    Nəticə tapılmadı.
-                                </TableCell>
-                            </TableRow>
-                        )}
+                            : table.getRowModel().rows?.length ? (
+                                table.getRowModel().rows.map((row) => (
+                                    <TableRow
+                                        key={row.id}
+                                        data-state={row.getIsSelected() && "selected"}
+                                        onClick={() => {
+                                            setActiveID(row.original.id);
+                                            openDrawer(DrawerKey.TEACHERSTAFFDETAIL)
+                                        }}
+                                    >
+                                        {row.getVisibleCells().map((cell) => (
+                                            <TableCell key={cell.id}>
+                                                {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                                            </TableCell>
+                                        ))}
+                                    </TableRow>
+                                ))
+                            ) : (
+                                <TableRow>
+                                    <TableCell colSpan={columns.length} className="h-24 text-center">
+                                        Nəticə tapılmadı.
+                                    </TableCell>
+                                </TableRow>
+                            )}
                     </TableBody>
                 </Table>
             </div>
@@ -88,7 +103,7 @@ export function TeacherTable<TData, TValue>({
                     <button
                         onClick={() => table.previousPage()}
                         disabled={!table.getCanPreviousPage()}
-                        className="h-10 w-10 grid place-items-center text-sidebar-text-color cursor-pointer"
+                        className="h-10 w-10 disabled:opacity-50 grid place-items-center text-sidebar-text-color cursor-pointer"
                     >
                         <Icons.chevronDown width={20} height={20} className="rotate-90" />
                     </button>
@@ -100,7 +115,7 @@ export function TeacherTable<TData, TValue>({
                     <button
                         onClick={() => table.nextPage()}
                         disabled={!table.getCanNextPage()}
-                        className="h-10 w-10 grid place-items-center text-sidebar-text-color cursor-pointer"
+                        className="h-10 w-10 disabled:opacity-50 grid place-items-center text-sidebar-text-color cursor-pointer"
                     >
                         <Icons.chevronDown width={20} height={20} className="-rotate-90" />
                     </button>
@@ -113,7 +128,7 @@ export function TeacherTable<TData, TValue>({
                         value={table.getState().pagination.pageSize}
                         onChange={(e) => table.setPageSize(Number(e.target.value))}
                     >
-                        {[10, 20, 30, 40, 50].map((pageSize) => (
+                        {[5, 10, 15, 20, 50].map((pageSize) => (
                             <option key={pageSize} value={pageSize}>
                                 {pageSize} / Səhifə
                             </option>
