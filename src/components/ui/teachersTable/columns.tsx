@@ -1,13 +1,7 @@
 import type { LabelVariant, TeacherDTO } from "@/types/types"
 import type { ColumnDef } from "@tanstack/react-table"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import Label from "../Label"
-import { Icons } from "@/assets"
+import TeacherActionsCell from "../TeacherActionsCell"
 
 export const columns: ColumnDef<TeacherDTO>[] = [
     {
@@ -105,31 +99,6 @@ export const columns: ColumnDef<TeacherDTO>[] = [
     {
         id: "actions",
         header: "",
-        cell: () => {
-            return (
-                <DropdownMenu modal={false}>
-                    <DropdownMenuTrigger asChild>
-                        <button className="h-6 w-6 grid place-items-center cursor-pointer focus:outline-secondary">
-                            <Icons.dotsVertical width={20} height={20} />
-                        </button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="w-[248px] gap-0.5 flex flex-col">
-                        <DropdownMenuItem >
-                            <Icons.file width={16} height={16} className="text-sidebar-icon-color" />
-                            Detallar
-                        </DropdownMenuItem>
-                        <DropdownMenuItem className="mb-1">
-                            <Icons.edit width={16} height={16} className="text-sidebar-icon-color" />
-                            Düzəliş et
-                        </DropdownMenuItem>
-                        <div className="absolute left-0 right-0 w-full h-[1px] top-[81px] bg-table-border"></div>
-                        <DropdownMenuItem className="text-red-600">
-                            <Icons.trashBin width={16} height={16} />
-                            Sil
-                        </DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
-            )
-        },
+        cell: ({ row }) => <TeacherActionsCell teacherID={row.original.id} />,
     },
 ]
