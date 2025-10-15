@@ -8,6 +8,7 @@ export const DrawerCloser: React.FC<DrawerCloserProps> = ({ children }) => {
 
     return (
         <button
+            type="button"
             onClick={() => setOpen(false)}
             className="p-2 text-gray-500 cursor-pointer"
         >

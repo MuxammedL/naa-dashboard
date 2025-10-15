@@ -66,6 +66,10 @@ body {
   @apply text-[14px] leading-5;
 }
 
+@utility label2 {
+  @apply text-[18px] leading-[28px];
+}
+
 @utility loading-state {
   @apply bg-gray-300 animate-pulse;
 }

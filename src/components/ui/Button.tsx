@@ -7,19 +7,20 @@ const Button = ({
     type = "button",
     children,
     handleClick,
-    variant = "primary",
+    variant = "ghost",
     size = "medium",
     href,
 }: ButtonProps) => {
     const classes = classNames(
-        `rounded-[100px] w-fit outline-none flex cursor-pointer overflow-hidden relative items-center font-semibold border-black-200 group borderflex gap-2 items-center border cursor-pointer font-semibold label1`,
+        `rounded-[100px] w-fit outline-none flex whitespace-nowrap cursor-pointer overflow-hidden relative items-center font-semibold border-black-200 group borderflex gap-2 items-center border cursor-pointer font-semibold label1`,
         {
-            "border-[#D5D7DA] text-sidebar-icon-color ": variant === "primary",
+            "border-[#D5D7DA] text-sidebar-icon-color ": variant === "ghost",
             "border-[#9BC6F5] text-[#2B58CA]": variant === "secondary",
+            "bg-secondary border-[#FFFFFF1F] text-white": variant === "primary"
         },
         {
             "py-1 px-x rounded-md": size === "small",
-            "py-2 px-3 rounded-lg": size === "medium",
+            "py-[7px] px-3 rounded-lg": size === "medium",
             "py-3 px-4 rounded-xl": size === "large",
         },
         className

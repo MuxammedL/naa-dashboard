@@ -26,10 +26,6 @@
   }
 
   .btnText {
-    @apply whitespace-nowrap text-text-color;
-  }
-
-  .btnSecondary .btnText {
-    @apply text-[#2B58CA];
+    @apply text-text-color;
   }
 }

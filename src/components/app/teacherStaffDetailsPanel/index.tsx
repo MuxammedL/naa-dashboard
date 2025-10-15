@@ -1,7 +1,7 @@
 import { Drawer, DrawerCloser, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
 import { DrawerKey } from "@/enum/DrawerKey";
 import { useDrawerController } from "@/hooks/useDrawerController";
-import { TeacherSerivce } from "@/services/TeacherService";
+import { TeacherService } from "@/services/TeacherService";
 import type { TeacherDetailTabValue, TeacherDTO } from "@/types/types";
 import { useQuery } from "@tanstack/react-query";
 import styles from "./details.module.css"
@@ -23,7 +23,7 @@ const TeacherStaffDetailsPanel = () => {
     } = useQuery<TeacherDTO | null>({
         queryKey: [activeID],
         queryFn: async () => {
-            const res = await TeacherSerivce.getTeacherById(activeID);
+            const res = await TeacherService.getTeacherById(activeID);
             return res;
         }
     })
@@ -127,6 +127,7 @@ const TeacherStaffDetailsPanel = () => {
                                             <div>
                                                 <button
                                                     onClick={() => toggleSection(0)}
+                                                    type="button"
                                                     className={styles.dropdownToggle}
                                                 >
                                                     <div className="flex items-center gap-2 text-text-color">
@@ -151,6 +152,7 @@ const TeacherStaffDetailsPanel = () => {
                                                             <InfoRow label="Vətəndaşlıq" value={teacher.personalInformation.citizenship} />
                                                             <InfoRow label="Sosial statusu" value={teacher.personalInformation.socialStatus} />
                                                             <InfoRow label="Sosial vəziyyəti" value={teacher.personalInformation.socialCondition} />
+                                                            <InfoRow label="Ailə vəziyyəti" value={teacher.personalInformation.maritalStatus} />
                                                             <InfoRow label="Hərbi status" value={teacher.personalInformation.militaryStatus} />
                                                             <InfoRow label="Əlillik status" value={teacher.personalInformation.disabilityStatus} />
                                                             <InfoRow label="İşə başlama tarixi" value={(teacher.personalInformation.employmentStartDate)} />
@@ -163,6 +165,7 @@ const TeacherStaffDetailsPanel = () => {
                                                 <button
                                                     onClick={() => toggleSection(1)}
                                                     className={styles.dropdownToggle}
+                                                    type="button"
                                                 >
                                                     <div className="flex items-center gap-2 text-text-color">
                                                         <Icons.phone width={20} height={20} />
@@ -177,7 +180,8 @@ const TeacherStaffDetailsPanel = () => {
                                                             <InfoRow label="Mobil nömrə" value={teacher.contactInformation.mobileNumber} />
                                                             <InfoRow label="Daxili nömrə" value={teacher.contactInformation.internalNumber} />
                                                             <InfoRow label="Ünvan" value={teacher.contactInformation.address} />
-                                                            <InfoRow label="Qeydiyyat" value={teacher.contactInformation.registrationNumber} />
+                                                            <InfoRow label="E-poçt" value={teacher.contactInformation.email} />
+                                                            <InfoRow label="Qeydiyyat Ünvanı" value={teacher.contactInformation.registrationAddress} />
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -190,6 +194,7 @@ const TeacherStaffDetailsPanel = () => {
                                             <div>
                                                 <button
                                                     onClick={() => toggleSection(2)}
+                                                    type="button"
                                                     className={styles.dropdownToggle}
                                                 >
                                                     <div className="flex items-center gap-2 text-text-color">

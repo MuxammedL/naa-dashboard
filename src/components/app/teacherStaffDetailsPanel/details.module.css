@@ -22,7 +22,7 @@
   }
 
   .teacherTitle {
-    @apply font-semibold text-[18px] leading-[28px];
+    @apply font-semibold label2;
   }
 
   .tabs {

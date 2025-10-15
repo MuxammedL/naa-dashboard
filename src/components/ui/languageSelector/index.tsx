@@ -37,6 +37,7 @@ const LanguageSelector = () => {
                 onClick={toggleDropdown}
                 className="flex items-center py-2 text-white h-9"
                 aria-label="Select language"
+                type="button"
                 aria-expanded={isOpen}
             >
                 <span className="font-semibold label1">

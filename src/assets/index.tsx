@@ -15,6 +15,7 @@ import File from "./File";
 import FileText from "./FileText";
 import Folder from "./Folder";
 import GraduationHat from "./GraduationHat";
+import InfoCircle from "./InfoCircle";
 import Language from "./Language";
 import PDFile from "./PDFile";
 import Phone from "./Phone";
@@ -55,5 +56,6 @@ export const Icons = {
     phone: Phone,
     language: Language,
     pdf: PDFile,
-    arrowCircle: ArrowCircle
+    arrowCircle: ArrowCircle,
+    infoCircle: InfoCircle
 }

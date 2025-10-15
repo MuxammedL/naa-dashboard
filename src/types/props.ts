@@ -11,7 +11,7 @@ export interface ButtonProps
   type?: "button" | "submit" | "reset";
   children: ReactNode;
   handleClick?: () => void;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "ghost";
   size?: "small" | "medium" | "large";
   href?: string;
 }
@@ -67,4 +67,9 @@ export interface TeacherTableProps<TValue> {
   columns: ColumnDef<TeacherDTO, TValue>[];
   data: TeacherDTO[];
   isLoading: boolean;
+}
+
+export interface TeacherSearchPanelProps {
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }

@@ -32,7 +32,7 @@ const Sidebar = () => {
 
     return (
         <aside className={`${styles.sidebar} ${activeSidebar ? styles.active : ""}`}>
-            <button className={styles.toggleButton} onClick={toggleSidebar}>
+            <button className={styles.toggleButton} onClick={toggleSidebar} type="button">
                 <Icons.sidebar width={20} height={20} />
             </button>
             <nav className={styles.nav}>

@@ -38,6 +38,7 @@ export type PersonalInformation = {
   citizenship: string;
   socialStatus: string;
   socialCondition: string;
+  maritalStatus: string;
   militaryStatus: string;
   disabilityStatus: string;
   employmentStartDate: string;
@@ -47,7 +48,8 @@ export type ContactInformation = {
   mobileNumber: string;
   internalNumber: string;
   address: string;
-  registrationNumber: string;
+  registrationAddress: string;
+  email: string;
 };
 
 export type ForeignLanguage = {

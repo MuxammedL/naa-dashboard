@@ -25,16 +25,8 @@
     @apply flex gap-4 items-start;
   }
 
-  .btn {
-    @apply bg-secondary !border-[#FFFFFF1F] !text-white;
-  }
-
-  .btnText {
-    @apply whitespace-nowrap text-white;
-  }
-
   .searchInput {
-    @apply relative border border-[#D5D7DA] text-text-color px-3 flex items-center rounded-lg pl-10 w-[248px] h-[38px];
+    @apply relative border border-[#D5D7DA] text-text-color px-3 flex items-center rounded-lg pl-10 w-[248px] h-[36px];
   }
 
   .input {

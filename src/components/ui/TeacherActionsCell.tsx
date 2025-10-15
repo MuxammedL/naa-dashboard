@@ -10,7 +10,7 @@ const TeacherActionsCell = ({ teacherID }: TeacherActionsCellProps) => {
     return (
         <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild onClick={(e) => e.stopPropagation()}>
-                <button className="h-6 w-6 grid place-items-center cursor-pointer focus:outline-secondary">
+                <button className="h-6 w-6 grid place-items-center cursor-pointer focus:outline-secondary" type='button'>
                     <Icons.dotsVertical width={20} height={20} />
                 </button>
             </DropdownMenuTrigger>

@@ -38,7 +38,7 @@ export function TeacherTable<TValue>({
 
     return (
         <div className="w-full h-full flex flex-col gap-4 justify-between overflow-hidden">
-            <div className="overflow-auto rounded-md border h-full border-table-border">
+            <div className="overflow-auto rounded-md border max-h-full border-table-border">
                 <Table>
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (
@@ -101,6 +101,7 @@ export function TeacherTable<TValue>({
             <div className="flex items-center gap-5 h-fit">
                 <div className="flex items-center gap-0.5">
                     <button
+                        type="button"
                         onClick={() => table.previousPage()}
                         disabled={!table.getCanPreviousPage()}
                         className="h-10 w-10 disabled:opacity-50 grid place-items-center text-sidebar-text-color cursor-pointer"
@@ -113,6 +114,7 @@ export function TeacherTable<TValue>({
                     </span>
 
                     <button
+                        type="button"
                         onClick={() => table.nextPage()}
                         disabled={!table.getCanNextPage()}
                         className="h-10 w-10 disabled:opacity-50 grid place-items-center text-sidebar-text-color cursor-pointer"

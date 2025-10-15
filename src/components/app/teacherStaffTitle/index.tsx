@@ -13,9 +13,9 @@ const TeacherStaffTitle = () => {
                     </p>
                 </div>
                 <div className={styles.btnsWrapper}>
-                    <Button variant="secondary" className={styles.btnSecondary}>
+                    <Button variant="secondary">
                         <Icons.calendarPlus width={20} height={20} />
-                        <span className={styles.btnText}>
+                        <span>
                             Növbəti il üçün hazırlıq
                         </span>
                     </Button>
