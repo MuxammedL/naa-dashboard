@@ -6,7 +6,7 @@ function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (
     <table
       data-slot="table"
-      className={cn("w-full caption-bottom text-sm h-full relative", className)}
+      className={cn("w-full caption-bottom text-sm relative", className)}
       {...props}
     />
   )
@@ -26,7 +26,7 @@ function TableBody({ className, ...props }: React.ComponentProps<"tbody">) {
   return (
     <tbody
       data-slot="table-body"
-      className={cn("[&_tr:last-child]:border-0 overflow-y-auto h-full", className)}
+      className={cn("[&_tr:last-child]:border-0", className)}
       {...props}
     />
   )

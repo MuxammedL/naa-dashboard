@@ -22,11 +22,12 @@
   }
 
   .nav {
-    @apply h-full mx-3 relative overflow-hidden;
+    @apply h-full ml-3 relative overflow-hidden;
   }
 
   .linkItems {
     @apply absolute inset-0  w-full h-full overflow-y-auto overflow-x-hidden;
+    scrollbar-gutter: stable;
   }
 
   .link {
