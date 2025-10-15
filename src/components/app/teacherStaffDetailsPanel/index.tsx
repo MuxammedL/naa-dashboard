@@ -295,7 +295,7 @@ const TeacherStaffDetailsPanel = () => {
                                             <ul className="space-y-[10px] mt-5">
                                                 {teacher.files.map((file, index) => (
                                                     <li key={index}>
-                                                        <a href="/public/file.pdf" className={styles.file} target="_blank">
+                                                        <a href="./file.pdf" className={styles.file} target="_blank">
                                                             <div className="flex items-center gap-2">
                                                                 {(() => {
                                                                     switch (file.type) {
