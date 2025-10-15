@@ -3,9 +3,11 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Icons } from '@/assets';
 import { DrawerKey } from '@/enum/DrawerKey';
 import type { TeacherActionsCellProps } from '@/types/props';
+import { useTeacherInfoController } from '@/hooks/useTeacherInfoController';
 
 const TeacherActionsCell = ({ teacherID }: TeacherActionsCellProps) => {
     const { openDrawer, setActiveID } = useDrawerController();
+    const { openPanel, setActiveID: setId } = useTeacherInfoController();
 
     return (
         <DropdownMenu modal={false}>
@@ -19,7 +21,7 @@ const TeacherActionsCell = ({ teacherID }: TeacherActionsCellProps) => {
                 align="end"
                 className="w-[248px] gap-0.5 flex flex-col"
             >
-                <DropdownMenuItem onClick={() => { openDrawer(DrawerKey.TEACHERSTAFFDETAIL); setActiveID(teacherID) }}>
+                <DropdownMenuItem onClick={(e) => { openDrawer(DrawerKey.TEACHERSTAFFDETAIL); setActiveID(teacherID); e.stopPropagation() }} >
                     <Icons.file
                         width={16}
                         height={16}
@@ -28,7 +30,7 @@ const TeacherActionsCell = ({ teacherID }: TeacherActionsCellProps) => {
                     Detallar
                 </DropdownMenuItem>
 
-                <DropdownMenuItem className="mb-1">
+                <DropdownMenuItem className="mb-1" onClick={(e) => { openPanel("edit"); setId(teacherID); e.stopPropagation() }}>
                     <Icons.edit
                         width={16}
                         height={16}

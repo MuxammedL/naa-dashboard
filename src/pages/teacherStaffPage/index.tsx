@@ -1,8 +1,10 @@
+import TeacherInfoPanel from "@/components/app/teacherInfoPanel"
 import TeacherStaffControls from "@/components/app/teacherStaffControls"
 import TeacherStaffDetailsPanel from "@/components/app/teacherStaffDetailsPanel"
 import TeacherStaffTitle from "@/components/app/teacherStaffTitle"
 import { TeacherTable } from "@/components/ui/teachersTable"
 import { columns } from "@/components/ui/teachersTable/columns"
+import { TeacherInfoControllerProvider } from "@/context/TeacherInfoControllerProvider"
 import { TeacherService } from "@/services/TeacherService"
 import type { TeacherDTO } from "@/types/types"
 import { useQuery } from "@tanstack/react-query"
@@ -31,12 +33,15 @@ const TeacherStaffPage = () => {
     }
 
     return (
-        <section className="px-6 py-4 flex flex-col gap-4 w-full h-full relative">
-            <TeacherStaffTitle />
-            <TeacherStaffControls />
-            <TeacherTable data={teachers} columns={columns} isLoading={isLoading} />
-            <TeacherStaffDetailsPanel />
-        </section>
+        <TeacherInfoControllerProvider>
+            <section className="px-6 py-4 flex flex-col gap-4 w-full h-full relative">
+                <TeacherStaffTitle />
+                <TeacherStaffControls />
+                <TeacherTable data={teachers} columns={columns} isLoading={isLoading} />
+                <TeacherStaffDetailsPanel />
+                <TeacherInfoPanel />
+            </section>
+        </TeacherInfoControllerProvider>
     )
 }
 

@@ -1,0 +1,51 @@
+@reference "../../../index.css";
+
+@layer components {
+  .container {
+    @apply w-0 h-0 overflow-hidden absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 opacity-0 invisible ease-out duration-300 transition-[top,left,opacity,visibility,translate,width,height] bg-white z-10 px-6 py-4;
+  }
+
+  .container.active {
+    @apply w-full h-full inset-0 opacity-100 visible top-0 left-0 translate-0;
+  }
+
+  .wrapper {
+    @apply px-4 py-6 border border-light-gray h-full rounded-lg flex flex-col gap-2;
+  }
+
+  .title {
+    @apply flex items-center justify-between pb-4 border-b border-b-light-gray;
+  }
+
+  .backBtn {
+    @apply label1 cursor-pointer font-semibold text-brand-700 flex gap-[6px] items-center;
+  }
+
+  .closeBtn {
+    @apply p-2 cursor-pointer text-secondary-text-color;
+  }
+
+  .header {
+    @apply flex flex-col;
+  }
+
+  .headerInfo {
+    @apply flex items-center gap-4 pb-2 border-b border-b-light-gray mt-2;
+  }
+
+  .avatar {
+    @apply rounded-4xl object-cover w-full h-full;
+  }
+
+  .avatarContainer {
+    @apply w-14 h-14 rounded-4xl;
+  }
+
+  .teacherTitle {
+    @apply label3 font-semibold;
+  }
+
+  .headerContent {
+    @apply flex items-center gap-6;
+  }
+}

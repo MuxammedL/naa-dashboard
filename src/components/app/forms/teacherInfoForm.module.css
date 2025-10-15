@@ -1,0 +1,79 @@
+@reference "../../../index.css";
+
+@layer components {
+  .headerInfo {
+    @apply flex items-center gap-4 pb-2 border-b border-b-light-gray mt-2;
+  }
+
+  .avatar {
+    @apply rounded-4xl object-cover w-full h-full;
+  }
+
+  .avatarContainer {
+    @apply w-14 h-14 rounded-4xl;
+  }
+
+  .teacherTitle {
+    @apply label3 font-semibold;
+  }
+
+  .headerContent {
+    @apply flex items-center gap-6;
+  }
+
+  .sidebar-form {
+    @apply flex h-full w-full gap-6;
+  }
+
+  .sidebar {
+    @apply w-60 border-e border-e-light-gray shrink-0;
+  }
+
+  .step {
+    @apply flex items-center gap-3;
+  }
+
+  .step.active .dot:after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    border: 2px solid #346cdc;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .icon {
+    @apply shrink-0 scale-0 transition-[scale] duration-300 ease-out;
+  }
+
+  .icon.active {
+    @apply scale-100;
+  }
+
+  .icon:nth-child(2) {
+    @apply -translate-y-6;
+  }
+
+  .icon:nth-child(3) {
+    @apply -translate-y-12;
+  }
+
+  .dot {
+    @apply w-6 h-6 flex flex-col overflow-hidden;
+  }
+
+  .line {
+    @apply w-0.5 h-full block bg-light-gray;
+  }
+
+  .lineInner {
+    @apply w-full h-0 block bg-[#4988E8] transition-[height] duration-300 ease-out;
+  }
+
+  .line.active .lineInner {
+    @apply h-[14px];
+  }
+}

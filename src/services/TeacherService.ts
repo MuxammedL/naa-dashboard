@@ -64,6 +64,28 @@ export class TeacherService {
     return data;
   }
 
+  static async getTeacherByIdFromAllTeachers(
+    id: number
+  ): Promise<TeacherDTO | null> {
+    await new Promise((resolve) => setTimeout(resolve, 300));
+
+    const mockResponse = {
+      ok: true,
+      status: 200,
+      json: async () =>
+        teachersData.find((teacher) => teacher.id === id) ||
+        teachers.find((teacher) => teacher.id === id) ||
+        null,
+    };
+
+    if (!mockResponse.ok) {
+      throw new Error(`Failed to fetch teacher: ${mockResponse.status}`);
+    }
+
+    const data: TeacherDTO | null = await mockResponse.json();
+    return data;
+  }
+
   static async getTeacherById(id: number): Promise<TeacherDTO | null> {
     await new Promise((resolve) => setTimeout(resolve, 300));
 

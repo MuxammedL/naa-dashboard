@@ -1,3 +1,4 @@
+import ActiveStep from "./ActiveStep";
 import Announcement from "./Announcement";
 import ArrowCircle from "./ArrowCircle";
 import BackPack from "./BackPack";
@@ -8,6 +9,8 @@ import Calendar from "./Calendar";
 import CalendarPlus from "./CalendarPlus";
 import ChevronDown from "./ChevronDown";
 import Done from "./Done";
+import DoneCircle from "./DoneCircle";
+import DoneStep from "./DoneStep";
 import DotsGrid from "./DotsGrid";
 import DotsVertical from "./DotsVertical";
 import Edit from "./Edit";
@@ -17,11 +20,13 @@ import Folder from "./Folder";
 import GraduationHat from "./GraduationHat";
 import InfoCircle from "./InfoCircle";
 import Language from "./Language";
+import LeftArrow from "./LeftArrow";
 import PDFile from "./PDFile";
 import Phone from "./Phone";
 import Search from "./Search";
 import Sidebar from "./Sidebar";
 import Stand from "./Stand";
+import Step from "./Step";
 import TrashBin from "./TrashBin";
 import User from "./User";
 import UserPlus from "./UserPlus";
@@ -57,5 +62,10 @@ export const Icons = {
     language: Language,
     pdf: PDFile,
     arrowCircle: ArrowCircle,
-    infoCircle: InfoCircle
+    infoCircle: InfoCircle,
+    doneCircle: DoneCircle,
+    leftArrow: LeftArrow,
+    step: Step,
+    activeStep: ActiveStep,
+    doneStep: DoneStep
 }

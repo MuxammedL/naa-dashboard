@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { teacherDetailTabs } from "@/constant/teacherDetailTabs";
 import { Icons } from "@/assets";
 import InfoRow from "@/components/ui/InfoRow";
+import { getStatusVariant } from "@/lib/utils";
 
 const TeacherStaffDetailsPanel = () => {
     const { isDrawerOpen, closeDrawer, activeID } = useDrawerController();
@@ -34,14 +35,6 @@ const TeacherStaffDetailsPanel = () => {
                 ? prev.filter(i => i !== index)
                 : [...prev, index]
         );
-    };
-
-    const getStatusVariant = (status: string) => {
-        switch (status) {
-            case "Əmr var": return "success";
-            case "Əmr gözləyir": return "warning";
-            default: return "error";
-        }
     };
 
     useEffect(() => {

@@ -1,7 +1,7 @@
 import type { TeacherDTO } from "@/types/types"
 import type { ColumnDef } from "@tanstack/react-table"
 import Label from "../Label"
-import TeacherActionsCell from "../TeacherActionsCell"
+import ChooseButton from "../ChooseButton"
 
 export const columns: ColumnDef<TeacherDTO>[] = [
     {
@@ -46,6 +46,6 @@ export const columns: ColumnDef<TeacherDTO>[] = [
     {
         id: "actions",
         header: "",
-        cell: ({ row }) => <TeacherActionsCell teacherID={row.original.id} />,
+        cell: ({ row }) => <ChooseButton id={row.original.id} />,
     },
 ]
