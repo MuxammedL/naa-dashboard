@@ -128,7 +128,7 @@ export function TeacherTable<TValue>({
                         value={table.getState().pagination.pageSize}
                         onChange={(e) => table.setPageSize(Number(e.target.value))}
                     >
-                        {[5, 10, 15, 20, 50].map((pageSize) => (
+                        {[10, 20, 30, 40, 50].map((pageSize) => (
                             <option key={pageSize} value={pageSize}>
                                 {pageSize} / Səhifə
                             </option>
