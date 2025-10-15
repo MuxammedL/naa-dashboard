@@ -37,8 +37,8 @@ export function TeacherTable<TValue>({
     const { openDrawer, setActiveID } = useDrawerController();
 
     return (
-        <div className="w-full h-full flex flex-col gap-4 justify-between">
-            <div className="overflow-hidden rounded-md border h-full border-table-border">
+        <div className="w-full h-full flex flex-col gap-4 justify-between overflow-hidden">
+            <div className="overflow-auto rounded-md border h-full border-table-border">
                 <Table>
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (
