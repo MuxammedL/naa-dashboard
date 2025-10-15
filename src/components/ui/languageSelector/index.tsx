@@ -39,7 +39,7 @@ const LanguageSelector = () => {
                 aria-label="Select language"
                 aria-expanded={isOpen}
             >
-                <span className="font-semibold text-[14px] leading-[20]">
+                <span className="font-semibold label1">
                     {selectedLanguage?.code.toUpperCase()}
                 </span>
                 <Icons.chevronDown className={`transition-transform ${isOpen ? "rotate-180" : ""}`} width={20} height={20} />

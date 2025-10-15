@@ -64,7 +64,7 @@ export function TeacherTable<TValue>({
                                 <TableRow key={rowIdx}>
                                     {columns.map((_, colIdx) => (
                                         <TableCell key={colIdx}>
-                                            <div className="h-4 bg-gray-300 rounded animate-pulse w-full">
+                                            <div className="h-4 loading-state rounded w-full">
                                                 &nbsp;
                                             </div>
                                         </TableCell>
@@ -108,7 +108,7 @@ export function TeacherTable<TValue>({
                         <Icons.chevronDown width={20} height={20} className="rotate-90" />
                     </button>
 
-                    <span className="text-[14px] leading-5 grid place-items-center font-semibold h-10 w-10 text-sidebar-text-color">
+                    <span className="label1 grid place-items-center font-semibold h-10 w-10 text-sidebar-text-color">
                         {table.getState().pagination.pageIndex + 1}
                     </span>
 
@@ -124,7 +124,7 @@ export function TeacherTable<TValue>({
                 <div className="flex items-center relative">
                     <select
                         id="page-size"
-                        className="h-10 relative z-[1] w-[128px] cursor-pointer outline-0 py-[10px] appearance-none rounded-lg border px-2 text-sm border-table-border font-semibold text-[14px] leading-5"
+                        className="h-10 relative z-[1] w-[128px] cursor-pointer outline-0 py-[10px] appearance-none rounded-lg border px-2 text-sm border-table-border font-semibold label1"
                         value={table.getState().pagination.pageSize}
                         onChange={(e) => table.setPageSize(Number(e.target.value))}
                     >

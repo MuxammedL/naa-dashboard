@@ -6,7 +6,7 @@
   }
 
   .divider {
-    @apply bg-[#E9EAEB] h-[1px] w-full;
+    @apply bg-light-gray h-[1px] w-full;
   }
 
   .title {

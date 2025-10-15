@@ -6,11 +6,11 @@
   }
 
   .divider {
-    @apply bg-[#E9EAEB] h-[1px] w-full;
+    @apply bg-light-gray h-[1px] w-full;
   }
 
   .title {
-    @apply text-[14px] leading-5 font-medium text-[#414651];
+    @apply label1 font-medium text-[#414651];
   }
 
   .description {
@@ -38,6 +38,6 @@
   }
 
   .input {
-    @apply text-[14px] leading-5 outline-0 placeholder:text-sidebar-icon-color;
+    @apply label1 outline-0 placeholder:text-sidebar-icon-color;
   }
 }

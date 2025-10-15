@@ -61,3 +61,11 @@ body {
 @utility header-buttons {
   @apply text-white p-2  cursor-pointer hover:opacity-50 transition-[opacity] custom-hover-transition;
 }
+
+@utility label1 {
+  @apply text-[14px] leading-5;
+}
+
+@utility loading-state {
+  @apply bg-gray-300 animate-pulse;
+}

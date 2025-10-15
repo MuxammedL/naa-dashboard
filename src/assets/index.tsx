@@ -1,4 +1,5 @@
 import Announcement from "./Announcement";
+import ArrowCircle from "./ArrowCircle";
 import BackPack from "./BackPack";
 import BarChart from "./BarChart";
 import Bell from "./Bell";
@@ -14,6 +15,9 @@ import File from "./File";
 import FileText from "./FileText";
 import Folder from "./Folder";
 import GraduationHat from "./GraduationHat";
+import Language from "./Language";
+import PDFile from "./PDFile";
+import Phone from "./Phone";
 import Search from "./Search";
 import Sidebar from "./Sidebar";
 import Stand from "./Stand";
@@ -47,5 +51,9 @@ export const Icons = {
     x: X,
     user: User,
     graduationHat: GraduationHat,
-    bookOpen: BookOpen
+    bookOpen: BookOpen,
+    phone: Phone,
+    language: Language,
+    pdf: PDFile,
+    arrowCircle: ArrowCircle
 }

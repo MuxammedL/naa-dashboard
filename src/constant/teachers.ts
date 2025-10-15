@@ -3,7 +3,8 @@ import type { TeacherDTO } from "@/types/types";
 export const teachers: TeacherDTO[] = [
   {
     id: 1,
-    avatar: "https://images.unsplash.com/photo-1722926323079-0836a07d2340?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
+    avatar:
+      "https://images.unsplash.com/photo-1722926323079-0836a07d2340?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
     personalInformation: {
       name: "Əli",
       surname: "Məmmədov",
@@ -54,14 +55,15 @@ export const teachers: TeacherDTO[] = [
     files: [
       { name: "Bakalavriat diplomu", type: "PDF", size: "1MB" },
       { name: "Magistratura diplomu", type: "PDF", size: "1MB" },
-      { name: "Sertifikat - İngilis dili B2", type: "PDF", size: "1MB" },
+      { name: "Sertifikat - İngilis dili B2", type: "Word", size: "1MB" },
     ],
     status: "Əmr yoxdur",
     fullName: "Əli Məmmədov Həsən",
   },
   {
     id: 2,
-    avatar: "https://images.unsplash.com/photo-1650056200016-70c0cb987ce7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=837",
+    avatar:
+      "https://images.unsplash.com/photo-1650056200016-70c0cb987ce7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=837",
     personalInformation: {
       name: "Nigar",
       surname: "Rəhimova",
@@ -110,7 +112,7 @@ export const teachers: TeacherDTO[] = [
     files: [
       { name: "Bakalavriat diplomu", type: "PDF", size: "1.2MB" },
       { name: "Magistratura diplomu", type: "PDF", size: "1.1MB" },
-      { name: "Doktorluq dissertasiyası", type: "PDF", size: "3.5MB" },
+      { name: "Doktorluq dissertasiyası", type: "Word", size: "3.5MB" },
       { name: "IELTS sertifikatı", type: "PDF", size: "800KB" },
     ],
     status: "Əmr var",
@@ -118,7 +120,8 @@ export const teachers: TeacherDTO[] = [
   },
   {
     id: 3,
-    avatar: "https://images.unsplash.com/photo-1654110455429-cf322b40a906?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8MnwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
+    avatar:
+      "https://images.unsplash.com/photo-1654110455429-cf322b40a906?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8MnwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     personalInformation: {
       name: "Rəşad",
       surname: "Əliyev",
@@ -167,14 +170,15 @@ export const teachers: TeacherDTO[] = [
     files: [
       { name: "Bakalavriat diplomu", type: "PDF", size: "950KB" },
       { name: "Magistratura diplomu", type: "PDF", size: "1.1MB" },
-      { name: "Dissertasiya", type: "PDF", size: "2.8MB" },
+      { name: "Dissertasiya", type: "Word", size: "2.8MB" },
     ],
     status: "Əmr var",
     fullName: "Rəşad Əliyev Mübariz",
   },
   {
     id: 4,
-    avatar: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXZhdGFyfGVufDB8MnwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
+    avatar:
+      "https://images.unsplash.com/photo-1701615004837-40d8573b6652?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXZhdGFyfGVufDB8MnwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     personalInformation: {
       name: "Səbinə",
       surname: "Həsənova",
@@ -231,7 +235,8 @@ export const teachers: TeacherDTO[] = [
   },
   {
     id: 5,
-    avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8MnwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
+    avatar:
+      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8MnwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     personalInformation: {
       name: "Kamran",
       surname: "Quliyev",
@@ -281,7 +286,7 @@ export const teachers: TeacherDTO[] = [
     files: [
       { name: "Bakalavriat diplomu", type: "PDF", size: "1.1MB" },
       { name: "Magistratura diplomu", type: "PDF", size: "1.3MB" },
-      { name: "Doktorluq dissertasiyası", type: "PDF", size: "4.2MB" },
+      { name: "Doktorluq dissertasiyası", type: "Word", size: "4.2MB" },
       { name: "Alman dili sertifikatı", type: "PDF", size: "600KB" },
     ],
     status: "Əmr var",
@@ -289,7 +294,8 @@ export const teachers: TeacherDTO[] = [
   },
   {
     id: 6,
-    avatar: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
+    avatar:
+      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     personalInformation: {
       name: "Günay",
       surname: "İsmayılova",
@@ -338,14 +344,15 @@ export const teachers: TeacherDTO[] = [
     files: [
       { name: "Bakalavriat diplomu", type: "PDF", size: "1MB" },
       { name: "Magistratura diplomu", type: "PDF", size: "1.2MB" },
-      { name: "Dissertasiya", type: "PDF", size: "3MB" },
+      { name: "Dissertasiya", type: "Word", size: "3MB" },
     ],
     status: "Əmr gözləyir",
     fullName: "Günay İsmayılova Cavid",
   },
   {
     id: 7,
-    avatar: "https://images.unsplash.com/photo-1654110455429-cf322b40a906?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
+    avatar:
+      "https://images.unsplash.com/photo-1654110455429-cf322b40a906?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     personalInformation: {
       name: "Orxan",
       surname: "Bayramov",
@@ -402,7 +409,8 @@ export const teachers: TeacherDTO[] = [
   },
   {
     id: 8,
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
+    avatar:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
     personalInformation: {
       name: "Leyla",
       surname: "Mustafayeva",
@@ -452,15 +460,16 @@ export const teachers: TeacherDTO[] = [
     files: [
       { name: "Bakalavriat diplomu", type: "PDF", size: "1MB" },
       { name: "Magistratura diplomu", type: "PDF", size: "1.2MB" },
-      { name: "Dissertasiya", type: "PDF", size: "3.3MB" },
-      { name: "Tədqiqat məqalələri", type: "PDF", size: "2.5MB" },
+      { name: "Dissertasiya", type: "Word", size: "3.3MB" },
+      { name: "Tədqiqat məqalələri", type: "Word", size: "2.5MB" },
     ],
     status: "Əmr var",
     fullName: "Leyla Mustafayeva Akif",
   },
   {
     id: 9,
-    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
+    avatar:
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
     personalInformation: {
       name: "Elvin",
       surname: "Nəbiyev",
@@ -510,7 +519,7 @@ export const teachers: TeacherDTO[] = [
     files: [
       { name: "Bakalavriat diplomu", type: "PDF", size: "1.1MB" },
       { name: "Magistratura diplomu", type: "PDF", size: "1.2MB" },
-      { name: "Doktorluq dissertasiyası", type: "PDF", size: "4.5MB" },
+      { name: "Doktorluq dissertasiyası", type: "Word", size: "4.5MB" },
       { name: "Monoqrafiya", type: "PDF", size: "5.8MB" },
     ],
     status: "Əmr var",
@@ -518,7 +527,8 @@ export const teachers: TeacherDTO[] = [
   },
   {
     id: 10,
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
     personalInformation: {
       name: "Aynur",
       surname: "Əhmədova",

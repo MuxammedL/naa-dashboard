@@ -26,7 +26,7 @@
   }
 
   .tabs {
-    @apply bg-active-sidebar-item border border-light-gray rounded-lg h-9 w-full relative; 
+    @apply bg-active-sidebar-item border border-light-gray rounded-lg h-9 w-full relative;
   }
 
   .tab {
@@ -38,6 +38,38 @@
   }
 
   .tabText {
-    @apply whitespace-nowrap font-semibold text-[14px] leading-5;
+    @apply whitespace-nowrap font-semibold label1;
+  }
+
+  .dropdownToggle {
+    @apply flex items-center gap-2 justify-between w-full cursor-pointer;
+  }
+
+  .chevronDown {
+    @apply duration-300 ease-out transition-[rotate];
+  }
+
+  .dropdownItems {
+    @apply grid overflow-hidden ease-out duration-300 transition-[grid] grid-rows-[0fr] opacity-0;
+  }
+
+  .dropdownItems.active {
+    @apply grid-rows-[1fr] opacity-100;
+  }
+
+  .file {
+    @apply flex p-2 gap-4 items-center justify-between border-light-gray border rounded-lg hover:bg-active-sidebar-item custom-hover-transition transition-[background];
+  }
+
+  .wordIcon {
+    @apply p-[10px] bg-active-sidebar-item rounded-lg grid place-items-center;
+  }
+
+  .arrowCircle {
+    @apply text-sidebar-icon-color custom-hover-transition transition-[rotate];
+  }
+
+  .file:hover .arrowCircle {
+    @apply rotate-45;
   }
 }

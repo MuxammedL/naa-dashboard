@@ -19,8 +19,8 @@ const Label = ({
             "border-[#D5D7DA]": variant === "ghost"
         },
         {
-            "py-0.5 px-[6px] rounded-md text-[12px] leading-[18px]": size === "small",
-            "py-0.5 px-2 rounded-md text-[14px] leading-5 ": size === "medium",
+            "py-0.5 px-[6px] rounded-md text-[12px] leading-[16.4px]": size === "small",
+            "py-0.5 px-2 rounded-md label1 leading-[18.4px]": size === "medium",
             "py-3 px-4 rounded-lg": size === "large",
         },
         className

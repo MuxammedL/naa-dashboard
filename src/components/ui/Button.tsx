@@ -12,7 +12,7 @@ const Button = ({
     href,
 }: ButtonProps) => {
     const classes = classNames(
-        `rounded-[100px] w-fit outline-none flex cursor-pointer overflow-hidden relative items-center font-semibold border-black-200 group borderflex gap-2 items-center border cursor-pointer font-semibold text-[14px] leading-5`,
+        `rounded-[100px] w-fit outline-none flex cursor-pointer overflow-hidden relative items-center font-semibold border-black-200 group borderflex gap-2 items-center border cursor-pointer font-semibold label1`,
         {
             "border-[#D5D7DA] text-sidebar-icon-color ": variant === "primary",
             "border-[#9BC6F5] text-[#2B58CA]": variant === "secondary",

@@ -1,8 +1,8 @@
 const InfoRow = ({ label, value }: { label: string, value: string }) => (
-    <div className="flex justify-between py-2">
-        <span className="text-sm text-gray-600">{label}</span>
-        <span className="text-sm text-gray-900 font-medium text-right">{value}</span>
-    </div>
+    <li className="flex justify-between">
+        <span className="label1 text-sidebar-text-color font-semibold">{label}</span>
+        <span className="label1 text-secondary-text-color font-medium">{value}</span>
+    </li>
 );
 
 export default InfoRow
