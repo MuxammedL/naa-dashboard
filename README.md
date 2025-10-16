@@ -1,73 +1,114 @@
-# React + TypeScript + Vite
+# 🛫 National Aviation Academy — Front-End Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This project is built using **React + TypeScript + TailwindCSS + React Query + Framer Motion**.  
+It follows **Atomic Design Architecture** and modular development practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ⚡ Technical Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Tailwind Configuration
 
-## Expanding the ESLint configuration
+- All color palette and font sizes used in Figma (e.g., `label1`, `label2`) are configured in `tailwind.config.js`.
+- Utility classes and `@apply` directives were used for easier reuse.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. Routing System
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Navigation is implemented using the `useRoutes` hook.
+- All routes are centralized in `routes.tsx` and support dynamic imports.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 3. Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Follows **Atomic Design** principles: `atoms`, `molecules`, `organisms`, `templates`, `pages`.
+- Each page is modular and reusable.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 4. Multi-functional Drawer
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Drawer component can open from **top, bottom, left, and right** directions.
+- Rendered via portal and controlled by a **Context Controller**.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 5. Animations
+
+- Enter and exit animations use `ease-out`.
+- Hover effects use `ease`.
+- All transitions are handled using **Framer Motion** for smooth animations.
+
+### 6. Performance Optimization
+
+- **React Query caching** prevents redundant API calls.
+- Transitions are applied only to changing elements to reduce CPU usage.
+- `useCallback` and `useMemo` are used to prevent unnecessary re-renders.
+
+### 7. UX Improvements
+
+- **Skeleton UI** for loading states.
+- Teacher add/edit panel opens with animations.
+- Smooth transitions for **Stepper** navigation.
+- `scrollbar-gutter: stable` ensures layout stability during scrolling.
+- **Body scroll disabled** for dashboard pages to maintain controlled scrolling.
+
+### 8. Global State Management
+
+- Teacher info panels are accessible globally via **Context Controller**.
+
+### 9. Modular Styling
+
+- All CSS is in `*.module.css` to prevent class conflicts.
+- Inline class usage minimized for cleaner code.
+
+### 10. Form Handling & Validation
+
+- **Formik + Yup** for form validation.
+- Error, focus, and disabled states styled according to the design.
+
+### 11. Mock API / Services
+
+- Services can switch between **mock data** and **real API** by changing `baseURL`.
+- Example service for teachers:
+
+```ts
+// src/services/TeacherService.ts
+import type { TeacherDTO } from "@/types/types";
+import { teachers } from "@/constant/teachers";
+
+export class TeacherService {
+  static async getTeachers(): Promise<TeacherDTO[]> {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(teachers), 500);
+    });
+  }
+
+  static async addTeacher(newTeacher: TeacherDTO): Promise<TeacherDTO> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        teachers.push(newTeacher);
+        resolve(newTeacher);
+      }, 500);
+    });
+  }
+
+  static async updateTeacher(updatedTeacher: TeacherDTO): Promise<TeacherDTO> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const index = teachers.findIndex((t) => t.id === updatedTeacher.id);
+        if (index === -1) return reject("Teacher not found");
+        teachers[index] = updatedTeacher;
+        resolve(updatedTeacher);
+      }, 500);
+    });
+  }
+
+  static async deleteTeacher(id: number): Promise<void> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const index = teachers.findIndex((t) => t.id === id);
+        if (index === -1) return reject("Teacher not found");
+        teachers.splice(index, 1);
+        resolve();
+      }, 500);
+    });
+  }
+}
 ```
