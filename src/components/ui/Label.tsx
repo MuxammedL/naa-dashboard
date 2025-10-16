@@ -16,7 +16,7 @@ const Label = ({
             "border-error-200 bg-error-50 text-error-700": variant === "error",
             "border-blue-200 bg-blue-50 text-blue-700": variant === "blue",
             "border-purple-200 bg-purple-50 text-purple-700": variant === "purple",
-            "border-[#D5D7DA]": variant === "ghost"
+            "border-cloud-gray": variant === "ghost"
         },
         {
             "py-0.5 px-[6px] rounded-md text-[12px] leading-[16.4px]": size === "small",

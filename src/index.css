@@ -25,6 +25,7 @@ body {
   --color-divider_light: #e0e0e0;
   --color-serviceHr: #1f2d2e;
   --color-orange: #ff6e06;
+  --color-error-message: #d92d20;
 
   --color-warning-50: #fffaeb;
   --color-warning-200: #fedf89;
@@ -51,6 +52,7 @@ body {
   --color-brand-700: #2b58ca;
 
   --color-table-border: #e9eaeb;
+  --color-cloud-gray: #d5d7da;
 }
 
 @utility custom-hover-transition {

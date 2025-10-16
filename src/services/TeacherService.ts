@@ -102,4 +102,103 @@ export class TeacherService {
     const data: TeacherDTO | null = await mockResponse.json();
     return data;
   }
+
+  static async addTeacher(
+    teacherData: Omit<TeacherDTO, "id" | "avatar" | "fullName" | "status">
+  ): Promise<TeacherDTO> {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    const newId = Math.max(...teachersData.map((t) => t.id), 0) + 1;
+
+    const fullName = `${teacherData.personalInformation.name} ${teacherData.personalInformation.surname} ${teacherData.personalInformation.fatherName}`;
+
+    const avatar = `https://images.unsplash.com/photo-${Date.now()}?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=880`;
+    const status = "Əmr gözləyir";
+    const newTeacher: TeacherDTO = {
+      id: newId,
+      avatar,
+      fullName,
+      status,
+      ...teacherData,
+    };
+
+    teachersData.push(newTeacher);
+
+    const mockResponse = {
+      ok: true,
+      status: 201,
+      json: async () => newTeacher,
+    };
+
+    if (!mockResponse.ok) {
+      throw new Error(`Failed to add teacher: ${mockResponse.status}`);
+    }
+
+    const data: TeacherDTO = await mockResponse.json();
+    return data;
+  }
+
+  static async updateTeacher(
+    id: number,
+    teacherData: Omit<TeacherDTO, "id" | "avatar" | "fullName" | "status">
+  ): Promise<TeacherDTO> {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    const teacherIndex =
+      teachersData.findIndex((t) => t.id === id) ||
+      teachers.findIndex((t) => t.id === id);
+
+    if (teacherIndex === -1) {
+      throw new Error(`Teacher with id ${id} not found`);
+    }
+
+    const existingTeacher =
+      teachersData[teacherIndex] || teachers[teacherIndex];
+
+    const fullName = `${teacherData.personalInformation.name} ${teacherData.personalInformation.surname} ${teacherData.personalInformation.fatherName}`;
+    const status = "Əmr var";
+
+    const updatedTeacher: TeacherDTO = {
+      ...existingTeacher,
+      ...teacherData,
+      fullName,
+      status,
+    };
+
+    teachersData[teacherIndex] = updatedTeacher;
+
+    const mockResponse = {
+      ok: true,
+      status: 200,
+      json: async () => updatedTeacher,
+    };
+
+    if (!mockResponse.ok) {
+      throw new Error(`Failed to update teacher: ${mockResponse.status}`);
+    }
+
+    const data: TeacherDTO = await mockResponse.json();
+    return data;
+  }
+
+  static async deleteTeacher(id: number): Promise<void> {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    const teacherIndex = teachersData.findIndex((t) => t.id === id);
+
+    if (teacherIndex === -1) {
+      throw new Error(`Teacher with id ${id} not found`);
+    }
+
+    teachersData.splice(teacherIndex, 1);
+
+    const mockResponse = {
+      ok: true,
+      status: 204,
+    };
+
+    if (!mockResponse.ok) {
+      throw new Error(`Failed to delete teacher: ${mockResponse.status}`);
+    }
+  }
 }

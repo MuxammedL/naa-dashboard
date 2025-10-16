@@ -26,7 +26,7 @@
   }
 
   .searchInput {
-    @apply relative border border-[#D5D7DA] text-text-color px-3 flex items-center rounded-lg pl-10 w-[248px] h-[36px];
+    @apply relative border border-cloud-gray text-text-color px-3 flex items-center rounded-lg pl-10 w-[248px] h-[36px];
   }
 
   .input {

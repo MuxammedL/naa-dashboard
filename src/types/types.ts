@@ -52,11 +52,6 @@ export type ContactInformation = {
   email: string;
 };
 
-export type ForeignLanguage = {
-  language: string;
-  level: string;
-};
-
 export type AcademicInformation = {
   department: string;
   academicDegree: string;
@@ -65,7 +60,7 @@ export type AcademicInformation = {
   positionType: string;
   employmentType: string;
   languagesTaught: string[];
-  foreignLanguages: ForeignLanguage[];
+  foreignLanguages: string[];
 };
 
 export type FileInfo = {

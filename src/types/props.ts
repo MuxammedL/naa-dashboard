@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode, SVGProps, JSX } from "react";
 import type { DrawerSide, LabelVariant, TeacherDTO } from "./types";
 import type { ColumnDef } from "@tanstack/react-table";
 
@@ -21,6 +21,7 @@ export interface InputProps
   name: string;
   label?: string;
   containerClass?: string;
+  icon?: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 }
 
 export interface LabelProps {
@@ -72,4 +73,24 @@ export interface TeacherTableProps<TValue> {
 export interface TeacherSearchPanelProps {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
+}
+
+export interface LanguageMultiSelectProps {
+  name: string;
+  label: string;
+  options: string[];
+  values: string[];
+  setFieldValue: (
+    field: string,
+    value: string[],
+    shouldValidate?: boolean
+  ) => void;
+}
+
+export interface SubjectSelectorProps {
+  name: string;
+  label: string;
+  availableSubjects: string[];
+  selectedSubjects: string[];
+  setFieldValue: (field: string, value: string[]) => void;
 }

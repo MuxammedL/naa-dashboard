@@ -34,7 +34,7 @@
   }
 
   .tab.active {
-    @apply text-secondary-text-color border-[#D5D7DA] bg-white;
+    @apply text-secondary-text-color border-cloud-gray bg-white;
   }
 
   .tabText {

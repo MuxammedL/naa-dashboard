@@ -1,14 +1,16 @@
-@reference './../../../app/globals.css';
+@reference "../../../index.css";
 
 @layer components {
   .label {
-    @apply z-[1] relative label2 px-1 pt-0.5 left-4 opacity-0 bg-grey-50 text-blue-1-500;
-    transition: transform 0.3s ease-out, opacity 0.2s ease-in;
-    transform: translate(0);
+    @apply label1 font-medium;
   }
 
   .input {
-    @apply rounded-[4px] border border-grey-600 px-4 py-3 lg:py-4 font-medium text-black-50 w-full focus:!border-blue-1-500 placeholder:text-black-50 label1 md:body4;
+    @apply border border-cloud-gray rounded-lg px-3 py-[7px] label1 text-text-color;
+  }
+
+  .input:disabled{
+    @apply bg-active-sidebar-item text-sidebar-icon-color;
   }
 }
 
@@ -18,10 +20,4 @@
 }
 .input:focus {
   outline: none;
-}
-
-.input:focus + .label,
-.label.active {
-  transform: translateY(10px);
-  opacity: 1;
 }

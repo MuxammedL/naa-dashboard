@@ -6,15 +6,23 @@ import styles from "./input.module.css"
 import type { InputProps } from "@/types/props";
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-    ({ containerClass, className, type = "text", id, ...props }, ref) => {
+    ({ containerClass, className, type = "text", icon, id, ...props }, ref) => {
         const [field, meta] = useField(props);
 
         const inputId = id || props.name;
         const errorId = `${inputId}-error`;
 
         return (
-            <div className={cn(containerClass, "min-h-[74px] md:min-h-[76px] lg:min-h-[84px]")}>
-                <div className="relative flex-col-reverse flex items-start justify-start -mt-5">
+            <div className={cn(containerClass, "min-h-[84px]")}>
+                <div className="relative flex flex-col gap-[6px]">
+                    {props.label && (
+                        <label
+                            htmlFor={inputId}
+                            className={`${styles.label}`}
+                        >
+                            {props.label} {props.required ? <span className="text-error-message">*</span> : null}
+                        </label>
+                    )}
                     <input
                         id={inputId}
                         type={type}
@@ -26,6 +34,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                                 {
                                     "focus:border-gray-medium": !meta.error || !meta.touched,
                                     "border-red-100": meta.error && meta.touched,
+                                    "pl-10": icon
                                 }
                             ),
                             className
@@ -34,22 +43,17 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                         {...field}
                         {...props}
                     />
-                    {props.label && (
-                        <label
-                            htmlFor={inputId}
-                            className={`${styles.label} ${field.value && styles.active}`}
-                        >
-                            {props.label}
-                        </label>
-                    )}
+                    {icon && <span className="absolute left-3 bottom-2 text-[#414651]">
+                        {React.createElement(icon, { width: 20, height: 20 })}
+                    </span>}
                 </div>
 
                 {meta.touched && meta.error && (
                     <div
                         id={errorId}
-                        className="ml-4 label2 text-red-300"
+                        className="label1 text-error-message"
                     >
-                        <ErrorMessage name={props.name} />
+                        <ErrorMessage name={props.name} /> sdss
                     </div>
                 )}
             </div>

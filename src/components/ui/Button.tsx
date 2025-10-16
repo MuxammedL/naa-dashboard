@@ -10,11 +10,12 @@ const Button = ({
     variant = "ghost",
     size = "medium",
     href,
+    form
 }: ButtonProps) => {
     const classes = classNames(
         `rounded-[100px] w-fit outline-none flex whitespace-nowrap cursor-pointer overflow-hidden relative items-center font-semibold border-black-200 group borderflex gap-2 items-center border cursor-pointer font-semibold label1`,
         {
-            "border-[#D5D7DA] text-sidebar-icon-color ": variant === "ghost",
+            "border-cloud-gray text-sidebar-icon-color ": variant === "ghost",
             "border-[#9BC6F5] text-[#2B58CA]": variant === "secondary",
             "bg-secondary border-[#FFFFFF1F] text-white": variant === "primary"
         },
@@ -37,6 +38,7 @@ const Button = ({
     ) : (
         <button
             type={type}
+            form={form}
             onClick={handleClick}
             className={classes}
             aria-label={typeof children === "string" ? children : "Action button"}

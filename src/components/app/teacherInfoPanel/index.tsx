@@ -4,7 +4,7 @@ import { Icons } from "@/assets";
 import { useQuery } from "@tanstack/react-query";
 import type { TeacherDTO } from "@/types/types";
 import { TeacherService } from "@/services/TeacherService";
-import TeacherInfoForm from "../forms/TeacherInfoForm";
+import TeacherInfoForm from "../forms/teacherInfoForm";
 
 const TeacherInfoPanel = () => {
     const { isPanelOpen, activeID, closePanel, type } = useTeacherInfoController();

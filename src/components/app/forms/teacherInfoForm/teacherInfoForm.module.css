@@ -1,4 +1,4 @@
-@reference "../../../index.css";
+@reference "../../../../index.css";
 
 @layer components {
   .headerInfo {
@@ -75,5 +75,26 @@
 
   .line.active .lineInner {
     @apply h-[14px];
+  }
+
+  .form {
+    @apply flex flex-col gap-6 overflow-y-auto absolute inset-0 transition-[translate] duration-300 ease-out bg-white;
+    scrollbar-gutter: stable;
+  }
+
+  .form:nth-child(2) {
+    @apply translate-y-full z-[1];
+  }
+
+  .form:nth-child(3) {
+    @apply translate-y-[200%] z-[2];
+  }
+
+  .form.active {
+    @apply translate-y-0;
+  }
+
+  .sendedMessage {
+    @apply flex justify-between w-[304px] gap-2 p-4 rounded-xl border border-cloud-gray bg-white ease-out transition-[translate] duration-300 fixed top-4 right-6 ;
   }
 }
