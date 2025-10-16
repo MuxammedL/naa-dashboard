@@ -245,8 +245,7 @@ const TeacherStaffDetailsPanel = () => {
                                                                 <div className="flex flex-wrap gap-2 label1 text-secondary-text-color font-medium">
                                                                     {teacher.academicInformation.foreignLanguages.map((item, idx) => (
                                                                         <span key={idx}>
-                                                                            {item.language}
-                                                                            {item.level && item.level !== "-" ? ` (${item.level})` : ""}
+                                                                            {item}
                                                                         </span>
                                                                     ))}
                                                                 </div>
